@@ -7,7 +7,7 @@
     --text: #333;
     --accent: #000;
     --card-border: #d0d0d0;
-    --card-bg: #f9f9f9;          /* light grey fill for cards */
+    --card-bg: #f9f9f9;
     --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -24,7 +24,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -38,7 +37,6 @@ header {
     text-align: center;
 }
 
-/* Hamburger - mobile only */
 .hamburger {
     display: none;
     position: absolute;
@@ -61,39 +59,22 @@ header {
     transition: all 0.3s ease;
 }
 
-.menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-.menu-toggle:checked + .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-.menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -7px);
-}
-
-/* Logo centered */
 .logo {
     max-width: 380px;
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-    transition: transform 0.3s ease;
 }
 
-.logo:hover {
-    transform: scale(1.04);
-}
-
-/* Desktop nav - centered below logo */
 .desktop-nav {
-    margin: 15px 0 20px;
+    margin: 10px 0 25px;
 }
 
 .desktop-nav ul {
     display: flex;
     justify-content: center;
-    gap: 55px;
+    gap: 60px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -105,7 +86,6 @@ header {
     font-weight: 600;
     font-size: 1.25em;
     text-decoration: none;
-    transition: all 0.2s;
 }
 
 .desktop-nav ul li a:hover,
@@ -115,12 +95,10 @@ header {
     text-underline-offset: 6px;
 }
 
-/* Hide checkbox */
 .menu-toggle {
     display: none;
 }
 
-/* Full-screen mobile menu */
 .mobile-menu {
     position: fixed;
     inset: 0;
@@ -132,7 +110,7 @@ header {
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.35s ease, visibility 0.35s ease;
+    transition: opacity 0.4s ease;
 }
 
 .mobile-menu ul {
@@ -149,7 +127,7 @@ header {
 .mobile-menu ul li a {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.6em;
+    font-size: 2.8em;
     font-weight: 700;
     text-decoration: none;
 }
@@ -165,14 +143,12 @@ header {
     position: absolute;
     top: 25px;
     right: 30px;
-    font-size: 4.5em;
+    font-size: 5em;
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    line-height: 1;
 }
 
-/* Main content */
 main {
     padding: 40px 20px;
     max-width: 1200px;
@@ -191,21 +167,20 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band member cards */
 .band-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 35px;
     justify-content: center;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .member {
-    background-color: var(--card-bg);          /* light grey fill */
+    background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 24px 18px;
+    padding: 25px 20px;
     box-shadow: var(--card-shadow);
     transition: all 0.25s ease;
     text-align: center;
@@ -233,7 +208,6 @@ h2, h4 {
     color: #555;
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-dark);
     color: white;
@@ -255,8 +229,6 @@ footer {
     .logo {
         max-width: 80vw;
         max-height: 12vh;
-        width: auto;
-        height: auto;
     }
 
     .menu-toggle:checked ~ .mobile-menu {
@@ -264,19 +236,16 @@ footer {
         visibility: visible;
     }
 
-    .menu-toggle:checked ~ main,
-    .menu-toggle:checked ~ footer {
-        filter: blur(4px) brightness(0.75);
-        pointer-events: none;
-    }
-
     .band-members {
-        grid-template-columns: 1fr;           /* 1 column on mobile */
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
+/* Medium screens (tablet) - 2 columns, centered */
 @media (min-width: 769px) and (max-width: 1100px) {
     .band-members {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+        justify-content: center;
     }
 }
