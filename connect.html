@@ -7,19 +7,43 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <header>
-    <a href="index.html">  <!-- Makes the logo clickable back to home -->
-        <img src="assets/halfstar.jpg" alt="Half Star Hotel" class="logo">
-    </a>
+ <header>
+    <div class="header-container">
+        <!-- Hamburger toggle (mobile only) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Logo (always visible) -->
+        <a href="index.html" class="logo-link">
+            <img src="assets/halfstar.jpg" alt="Half Star Hotel" class="logo">
+        </a>
+
+        <!-- Desktop nav (hidden on mobile) -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="connect.html">Connect</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="connect.html">Connect</a></li>
-        </ul>
-    </nav>
+
+<!-- Full-screen mobile menu overlay -->
+<nav class="mobile-menu">
+    <label for="menu-toggle" class="close-btn">&times;</label>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="connect.html">Connect</a></li>
+    </ul>
+</nav>
     <main>
         <section class="social">
             <h2>Follow Half Star Hotel on Social Media</h2>
