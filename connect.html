@@ -31,7 +31,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="connect.html" class="active">Connect</a></li> <!-- active here -->
+            <li><a href="connect.html" class="active">Connect</a></li>
         </ul>
     </nav>
 </header>
@@ -42,7 +42,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="connect.html" class="active">Connect</a></li> <!-- active here too -->
+        <li><a href="connect.html" class="active">Connect</a></li>
     </ul>
 </nav>
 
@@ -50,39 +50,25 @@
     <section class="social">
         <h2>Follow Half Star Hotel on Social Media</h2>
 
-        <!-- Social Icons -->
-     <!-- Social Icons - black circle with white symbols, matching Thunder Child style -->
-<div class="social-icons">
-    <a href="https://www.instagram.com/halfstarhotel" target="_blank" rel="noopener noreferrer">
-        <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="23" fill="white"/>
-            <circle cx="24" cy="24" r="20" fill="black"/>
-            <rect x="16" y="16" width="16" height="16" rx="4.5" stroke="white" stroke-width="2" fill="none"/>
-            <circle cx="24" cy="24" r="4.5" stroke="white" stroke-width="2" fill="none"/>
-            <circle cx="29" cy="19" r="1.8" fill="white"/>
-        </svg>
-    </a>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/halfstarhotel" target="_blank" rel="noopener noreferrer">
+                <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23" fill="white"/>
+                    <circle cx="24" cy="24" r="20" fill="black"/>
+                    <rect x="16" y="16" width="16" height="16" rx="4.5" stroke="white" stroke-width="2" fill="none"/>
+                    <circle cx="24" cy="24" r="4.5" stroke="white" stroke-width="2" fill="none"/>
+                    <circle cx="29" cy="19" r="1.8" fill="white"/>
+                </svg>
+            </a>
 
-    <a href="https://www.facebook.com/halfstarhotel/" target="_blank" rel="noopener noreferrer">
-        <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="23" fill="white"/>
-            <circle cx="24" cy="24" r="20" fill="black"/>
-            <path d="M25.2 17h3.2v-3.2h-3.2c-2.7 0-4.8 2.1-4.8 4.8v3.2H17v3.2h3.4v8.8h3.4v-8.8h3l0.8-3.2h-3.8v-3.2c0-0.9 0.7-1.6 1.6-1.6z" fill="white"/>
-        </svg>
-    </a>
-
-    <!-- Optional: Email icon (add if you want a mailto link) -->
-    <!--
-    <a href="mailto:your-band-email@example.com">
-        <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="23" fill="white"/>
-            <circle cx="24" cy="24" r="20" fill="black"/>
-            <rect x="15" y="17" width="18" height="14" rx="2" stroke="white" stroke-width="2" fill="none"/>
-            <polyline points="15,17 24,26 33,17" fill="none" stroke="white" stroke-width="2"/>
-        </svg>
-    </a>
-    -->
-</div>
+            <a href="https://www.facebook.com/halfstarhotel/" target="_blank" rel="noopener noreferrer">
+                <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23" fill="white"/>
+                    <circle cx="24" cy="24" r="20" fill="black"/>
+                    <path d="M25.2 17h3.2v-3.2h-3.2c-2.7 0-4.8 2.1-4.8 4.8v3.2H17v3.2h3.4v8.8h3.4v-8.8h3l0.8-3.2h-3.8v-3.2c0-0.9 0.7-1.6 1.6-1.6z" fill="white"/>
+                </svg>
+            </a>
+        </div>
     </section>
 
     <section id="contact">
@@ -106,6 +92,19 @@
 <footer>
     <p>Copyright © 2025 Half Star Hotel - All Rights Reserved.</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.querySelector('.mobile-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('change', function() {
+                menu.style.opacity = this.checked ? '1' : '0';
+                menu.style.visibility = this.checked ? 'visible' : 'hidden';
+            });
+        }
+    });
+</script>
 
 </body>
 </html>
