@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel shared styles */
+/* css/style.css - Half Star Hotel - FINAL WORKING VERSION */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -9,8 +9,6 @@
     --card-border: #d0d0d0;
     --card-bg: #f9f9f9;
     --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    --form-border: #d0d0d0;
-    --form-bg: #ffffff;
 }
 
 * {
@@ -62,7 +60,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Logo wrapper to limit click area */
 .logo-wrapper {
     display: inline-block;
     max-width: 60%;
@@ -164,7 +161,7 @@ header {
     cursor: pointer;
 }
 
-/* Hero band image */
+/* Hero band image (top of index) */
 .hero-band {
     text-align: center;
     margin: 20px auto 50px auto;
@@ -218,7 +215,7 @@ header {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Band members */
+/* Band members - working centered 3+2 layout */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -268,13 +265,13 @@ header {
     margin-bottom: 20px;
 }
 
-/* Contact form styling - spiced up */
+/* Contact form - spiced up */
 #contact {
-    background: var(--form-bg);
-    border: 1px solid var(--form-border);
+    background: #ffffff;
+    border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 40px;
-    max-width: 700px;
+    padding: 50px 40px;
+    max-width: 720px;
     margin: 0 auto 40px auto;
     box-shadow: var(--card-shadow);
 }
@@ -285,7 +282,7 @@ header {
 }
 
 #contact h3 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.4em;
     color: #555;
 }
@@ -293,39 +290,40 @@ header {
 #contact form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
 }
 
 #contact label {
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     display: block;
+    color: #333;
 }
 
 #contact input,
 #contact textarea {
     width: 100%;
-    padding: 14px 16px;
+    padding: 16px 18px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1em;
-    transition: border-color 0.3s;
+    font-size: 1.05em;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 #contact input:focus,
 #contact textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
 }
 
 #contact button {
     background: var(--primary-dark);
     color: white;
-    padding: 14px 30px;
+    padding: 16px 36px;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
@@ -333,30 +331,13 @@ header {
 }
 
 #contact button:hover {
-    background: #444;
+    background: #222;
 }
 
-/* Events */
-.event {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    text-align: left;
-}
-
-/* Gallery */
-.gallery-item {
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    text-align: center;
-}
-
-.gallery-item img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    margin-top: 15px;
+/* Events & Gallery spacing */
+.event:last-child,
+.gallery-item:last-child {
+    margin-bottom: 80px;
 }
 
 /* Footer */
@@ -365,7 +346,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* Mobile adjustments */
@@ -403,7 +384,6 @@ footer {
     .hero-img {
         max-width: 100%;
         border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     .story-container,
@@ -441,11 +421,12 @@ footer {
         margin-bottom: 15px;
     }
 
-    footer {
-        margin-top: 15px;
+    #contact {
+        padding: 40px 25px;
+        margin: 0 20px 30px 20px;
     }
 
-    #contact {
-        padding: 30px 20px;
+    footer {
+        margin-top: 15px;
     }
 }
