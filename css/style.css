@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel shared styles - RESTORED WORKING VERSION */
+/* css/style.css - Half Star Hotel shared styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -260,14 +260,15 @@ h2, h4 {
     color: #555;
 }
 
-/* Social section */
+/* Social section spacing */
 .social {
-    margin-bottom: 40px;  /* reduced space to footer */
+    margin-top: 40px;     /* space from preceding section */
+    margin-bottom: 20px;  /* reduced space to footer */
 }
 
-/* Extra space above band cards on index */
+/* Extra top margin on Meet the Band (for index page) */
 #meet-the-band {
-    margin-top: 100px;    /* more space between previous content and band cards */
+    margin-top: 100px;    /* more space above social on index */
 }
 
 /* Events - more space after last event */
@@ -286,7 +287,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 40px;     /* reduced from social */
+    margin-top: 20px;     /* tight to social */
 }
 
 /* Mobile adjustments */
@@ -348,10 +349,11 @@ footer {
     }
 
     .social {
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 15px;
     }
 
     footer {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }
