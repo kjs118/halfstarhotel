@@ -180,7 +180,7 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Hero band image - centered under nav */
+/* Hero band image (top centered one) */
 .hero-img {
     width: 100%;
     max-width: 800px;             /* desktop max - adjust if you want bigger/smaller */
@@ -200,11 +200,13 @@ h2, h4 {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-
-/* Story & Inspires sections */
-.story-section,
-.inspires-section {
-    margin-bottom: 80px;
+/* Our Story image (inside left/right section) */
+.story-img,
+.inspires-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .story-container,
