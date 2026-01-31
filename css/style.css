@@ -389,20 +389,20 @@ footer {
         margin-top: 15px;
     }
 }
-    /* =========================
-   CONTACT FORM UPGRADE
-========================= */
+/* ================= CONTACT FORM ================= */
 
 #contact {
-    max-width: 700px;
+    max-width: 720px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 14px; /* tight vertical spacing */
+    gap: 18px;
+    margin-top: 25px;
+    text-align: left;
 }
 
 .form-group {
@@ -424,25 +424,13 @@ footer {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-family: 'Inter', sans-serif;
-    transition: all 0.2s ease;
 }
 
-/* Makes text box not huge vertically */
 .contact-form textarea {
+    min-height: 120px;
     resize: vertical;
-    min-height: 110px;
-    max-height: 200px;
 }
 
-/* Focus glow */
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #000;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
-}
-
-/* Button styling */
 .send-btn {
     margin-top: 10px;
     padding: 12px;
@@ -453,74 +441,5 @@ footer {
     background: #000;
     color: white;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.send-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-    /* ================= CONTACT FORM ONLY ================= */
-
-#contact {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.send-btn {
-  margin-top: 10px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Desktop — labels above fields, fields centered */
-@media (min-width: 769px) {
-  .contact-form {
-    align-items: center;
-  }
-
-  .form-group {
-    max-width: 520px;
-  }
 }
 
