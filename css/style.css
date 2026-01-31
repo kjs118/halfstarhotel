@@ -249,3 +249,24 @@ footer {
         justify-content: center;
     }
 }
+/* Social Icons - same style as thunderchildband.com */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;           /* space between icons */
+    margin: 40px 0;      /* nice breathing room top/bottom */
+}
+
+.social-icon {
+    width: 64px;         /* very common size — you can change to 56px / 72px */
+    height: 64px;
+    transition: all 0.25s ease;
+    filter: grayscale(0%);   /* already black & white */
+}
+
+.social-icon:hover {
+    transform: scale(1.15);       /* gentle grow on hover */
+    filter: brightness(1.3);      /* or you can change to color on hover if you want */
+    /* Optional color version on hover example: */
+    /* filter: brightness(1) hue-rotate(0deg) saturate(200%); */
+}
