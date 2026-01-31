@@ -4,10 +4,10 @@
 
 :root {
     --primary-dark: #333;
-    --primary-light: #ffffff;     /* Changed to white */
     --text: #333;
     --accent: #000;
-    --card-border: #d0d0d0;       /* Subtle grey for band member cards */
+    --card-border: #d0d0d0;
+    --card-bg: #f9f9f9;          /* light grey fill for cards */
     --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -19,7 +19,7 @@
 
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    background-color: #ffffff;    /* Pure white body */
+    background-color: #ffffff;
     color: var(--text);
     line-height: 1.6;
 }
@@ -31,56 +31,49 @@ header {
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 20px;
-    position: relative;
+    padding: 20px;
+    text-align: center;
 }
 
-/* Hamburger (left side) */
+/* Hamburger - mobile only */
 .hamburger {
+    display: none;
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 22px;
+    width: 32px;
+    height: 24px;
     cursor: pointer;
     z-index: 1001;
 }
 
 .hamburger span {
     background: #000;
-    height: 3px;
+    height: 4px;
     width: 100%;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* Hamburger animation to X */
 .menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(6px, 6px);
 }
 .menu-toggle:checked + .hamburger span:nth-child(2) {
     opacity: 0;
 }
 .menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(8px, -7px);
 }
 
-/* Logo - always centered */
-.logo-link {
-    text-align: center;
-}
-
+/* Logo centered */
 .logo {
-    max-width: 400px;
+    max-width: 380px;
     width: 100%;
     height: auto;
     display: block;
@@ -89,44 +82,40 @@ header {
 }
 
 .logo:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
-/* Desktop nav - below logo, centered */
+/* Desktop nav - centered below logo */
 .desktop-nav {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
+    margin: 15px 0 20px;
 }
 
 .desktop-nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin: 0;
+    gap: 55px;
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .desktop-nav ul li a {
     color: #000;
-    text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 1.2em;
-    transition: all 0.2s ease;
+    font-size: 1.25em;
+    text-decoration: none;
+    transition: all 0.2s;
 }
 
 .desktop-nav ul li a:hover,
 .desktop-nav ul li a.active {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 5px;
-    color: var(--accent);
+    text-underline-offset: 6px;
 }
 
-/* Checkbox hidden */
+/* Hide checkbox */
 .menu-toggle {
     display: none;
 }
@@ -134,11 +123,8 @@ header {
 /* Full-screen mobile menu */
 .mobile-menu {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.98);
+    inset: 0;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,39 +132,40 @@ header {
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
 }
 
 .mobile-menu ul {
     list-style: none;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .mobile-menu ul li {
-    margin: 35px 0;
+    margin: 40px 0;
 }
 
 .mobile-menu ul li a {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.4em;
+    font-size: 2.6em;
     font-weight: 700;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.mobile-menu ul li a:hover,
-.mobile-menu ul li a.active {
-    color: #444;
+.mobile-menu ul li a.active,
+.mobile-menu ul li a:hover {
     text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
 }
 
-/* Close X */
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 4em;
+    top: 25px;
+    right: 30px;
+    font-size: 4.5em;
     font-weight: bold;
     color: #000;
     cursor: pointer;
@@ -190,11 +177,11 @@ main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #ffffff;    /* Explicit white */
+    background: #ffffff;
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     text-align: center;
 }
 
@@ -204,45 +191,45 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band member cards - now with grey border & card style */
+/* Band member cards */
 .band-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .member {
-    text-align: center;
-    max-width: 240px;              /* Slightly wider for better card feel */
-    flex: 1 1 220px;
-    background-color: #ffffff;
-    border: 1px solid var(--card-border);   /* Subtle grey border */
+    background-color: var(--card-bg);          /* light grey fill */
+    border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 20px 15px;
+    padding: 24px 18px;
     box-shadow: var(--card-shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.25s ease;
+    text-align: center;
 }
 
 .member:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .member img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .member h4 {
-    margin: 12px 0 6px;
-    font-size: 1.25em;
+    margin: 12px 0 8px;
+    font-size: 1.3em;
 }
 
 .member p {
-    font-size: 0.95em;
+    font-size: 0.98em;
     color: #555;
 }
 
@@ -251,11 +238,11 @@ footer {
     background-color: var(--primary-dark);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+    padding: 24px;
+    margin-top: 80px;
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -279,16 +266,17 @@ footer {
 
     .menu-toggle:checked ~ main,
     .menu-toggle:checked ~ footer {
-        filter: blur(3px) brightness(0.7);
+        filter: blur(4px) brightness(0.75);
         pointer-events: none;
     }
 
     .band-members {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;           /* 1 column on mobile */
     }
+}
 
-    .member {
-        max-width: 320px;          /* Wider cards on mobile for readability */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .band-members {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
     }
 }
