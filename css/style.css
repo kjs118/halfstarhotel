@@ -229,6 +229,7 @@ h2, h4 {
     min-width: 300px;
 }
 
+/* Our Story image (inside left/right section) */
 .story-img,
 .inspires-img {
     width: 100%;
@@ -343,21 +344,19 @@ footer {
         margin: 15px auto 40px auto;
     }
 
-    .hero-img {
-        max-width: 100%;
+  /* Mobile - make both images match full container width */
+@media (max-width: 768px) {
+    .hero-img,
+    .story-img,
+    .inspires-img {
+        max-width: 100%;          /* both take full available width on mobile */
         border-radius: 8px;
         box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
-
     .story-container,
     .inspires-container {
         flex-direction: column;
         gap: 30px;
-    }
-
-    .story-image,
-    .inspires-image {
-        order: -1;
     }
 
     .story-text,
