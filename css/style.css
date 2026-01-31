@@ -112,12 +112,6 @@ header {
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0s linear 0.4s;
-}
-
-.mobile-menu[aria-hidden="false"] {
-    opacity: 1;
-    visibility: visible;
     transition: opacity 0.4s ease;
 }
 
@@ -175,19 +169,19 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members – centered rows on desktop */
+/* Band members – centered 3+2 layout on desktop */
 .band-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-    gap: 40px;                      /* even spacing */
-    justify-content: center;        /* centers the whole grid horizontally */
-    justify-items: center;          /* centers each card in its grid cell */
-    max-width: 1100px;              /* limits total width so centering has room */
-    margin: 0 auto 60px auto;       /* centers container + bottom margin */
+    grid-template-columns: repeat(auto-fit, 320px);
+    gap: 40px;
+    justify-content: center;
+    justify-items: center;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
 }
 
 .member {
-    width: 320px;                   /* fixed width → forces even columns & perfect centering */
+    width: 320px;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
@@ -196,6 +190,7 @@ h2, h4 {
     transition: all 0.25s ease;
     text-align: center;
 }
+
 .member:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
@@ -216,6 +211,23 @@ h2, h4 {
 .member p {
     font-size: 0.98em;
     color: #555;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.social-icons a {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.15);
+    opacity: 0.9;
 }
 
 /* Footer */
@@ -245,7 +257,6 @@ footer {
         object-fit: contain;
     }
 
-    /* Force mobile menu visibility */
     .menu-toggle:checked ~ .mobile-menu {
         opacity: 1 !important;
         visibility: visible !important;
@@ -263,7 +274,4 @@ footer {
         width: 100%;
         max-width: 360px;
     }
-    .band-members {
-    border: 2px solid red !important; /* temporary debug border */
-}
 }
