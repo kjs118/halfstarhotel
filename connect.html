@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect | Half Star Hotel</title>
-   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <div class="header-container">
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -27,10 +28,10 @@
 
     <nav class="desktop-nav">
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>   <!-- change .active per page -->
+            <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="events.html">Events</a></li>
-            <li><a href="connect.html">Connect</a></li>
+            <li><a href="connect.html" class="active">Connect</a></li> <!-- active here -->
         </ul>
     </nav>
 </header>
@@ -38,57 +39,50 @@
 <nav class="mobile-menu">
     <label for="menu-toggle" class="close-btn">×</label>
     <ul>
-        <li><a href="index.html" class="active">Home</a></li>   <!-- same .active here -->
+        <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="connect.html">Connect</a></li>
+        <li><a href="connect.html" class="active">Connect</a></li> <!-- active here too -->
     </ul>
 </nav>
-</header>
 
-<!-- Full-screen mobile menu -->
-<nav class="mobile-menu">
-    <label for="menu-toggle" class="close-btn">×</label>
-    <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="connect.html">Connect</a></li>
-    </ul>
-</nav>
-    <main>
-        <section class="social">
-            <h2>Follow Half Star Hotel on Social Media</h2>
-           <!-- Social Icons - same style as thunderchildband.com -->
-<div class="social-icons">
-    <a href="https://www.facebook.com/halfstarhotel/" target="_blank" rel="noopener noreferrer">
-        <img src="assets/social/facebook-bw.png" alt="Facebook" class="social-icon">
-    </a>
-    
-    <a href="https://www.instagram.com/halfstarhotel" target="_blank" rel="noopener noreferrer">
-        <img src="assets/social/instagram-bw.png" alt="Instagram" class="social-icon">
-    </a>
-</div>
-        </section>
-        <section id="contact">
-            <h2>Interested in Booking Us?</h2>
-            <h3>Contact Us</h3>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain"> <!-- Replace with actual email or form handler -->
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Copyright © 2018 Half Star Hotel - All Rights Reserved.</p>
-    </footer>
+<main>
+    <section class="social">
+        <h2>Follow Half Star Hotel on Social Media</h2>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/halfstarhotel/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/social/facebook-bw.png" alt="Facebook" class="social-icon">
+            </a>
+
+            <a href="https://www.instagram.com/halfstarhotel" target="_blank" rel="noopener noreferrer">
+                <img src="assets/social/instagram-bw.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Interested in Booking Us?</h2>
+        <h3>Contact Us</h3>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email*</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" rows="5"></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Copyright © 2025 Half Star Hotel - All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
