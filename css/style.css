@@ -180,7 +180,43 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members - centered 3+2 layout on desktop */
+/* Story & Inspires sections */
+.story-section,
+.inspires-section {
+    margin-bottom: 80px;
+}
+
+.story-container,
+.inspires-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-image,
+.inspires-image {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.story-text,
+.inspires-text {
+    flex: 1 1 50%;
+    min-width: 300px;
+}
+
+.story-img,
+.inspires-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Band members */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -224,21 +260,24 @@ h2, h4 {
     color: #555;
 }
 
-/* Social icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 40px 0;
+/* Social section - reduced bottom margin */
+.social {
+    margin-bottom: 40px; /* less space to footer */
 }
 
-.social-icons a {
-    transition: transform 0.25s ease, opacity 0.25s ease;
+/* Extra top margin on Meet the Band to create more space above social */
+#meet-the-band {
+    margin-top: 100px; /* increased space between band cards and social */
 }
 
-.social-icons a:hover {
-    transform: scale(1.15);
-    opacity: 0.9;
+/* Events page - more space after last event */
+.event:last-child {
+    margin-bottom: 80px; /* more space before social */
+}
+
+/* Gallery page - more space after last gallery item */
+.gallery-item:last-child {
+    margin-bottom: 80px; /* more space before social */
 }
 
 /* Footer */
@@ -247,7 +286,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 80px;
+    margin-top: 40px; /* reduced space from social */
 }
 
 /* Mobile adjustments */
@@ -278,6 +317,22 @@ footer {
         transition: opacity 0.4s ease;
     }
 
+    .story-container,
+    .inspires-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .story-image,
+    .inspires-image {
+        order: -1; /* image on top */
+    }
+
+    .story-text,
+    .inspires-text {
+        text-align: center;
+    }
+
     .band-members {
         gap: 30px;
     }
@@ -287,58 +342,16 @@ footer {
         width: 100%;
         max-width: 360px;
     }
-}
-/* Story & Inspires sections - desktop side-by-side, mobile stacked (image on top) */
-.story-section,
-.inspires-section {
-    margin-bottom: 80px;
-}
 
-.story-container,
-.inspires-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.story-image,
-.inspires-image {
-    flex: 1 1 45%;
-    min-width: 300px;
-}
-
-.story-text,
-.inspires-text {
-    flex: 1 1 50%;
-    min-width: 300px;
-}
-
-.story-img,
-.inspires-img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-/* Mobile: image on top, text below */
-@media (max-width: 768px) {
-    .story-container,
-    .inspires-container {
-        flex-direction: column;
-        gap: 30px;
+    #meet-the-band {
+        margin-top: 60px; /* smaller on mobile */
     }
 
-    .story-image,
-    .inspires-image {
-        order: -1;  /* image first */
+    .social {
+        margin-bottom: 30px;
     }
 
-    .story-text,
-    .inspires-text {
-        text-align: center;
+    footer {
+        margin-top: 30px;
     }
 }
