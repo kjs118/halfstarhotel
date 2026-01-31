@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel shared styles */
+/* css/style.css - Half Star Hotel - FINAL VERSION */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -58,6 +58,17 @@ header {
     width: 100%;
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+/* Logo wrapper to prevent click overlap with hamburger */
+.logo-wrapper {
+    display: inline-block;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.logo-link {
+    display: block;
 }
 
 .logo {
@@ -169,18 +180,27 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members – centered 3+2 layout on desktop */
+/* Band members - FINAL centered 3+2 layout */
 .band-members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 320px);
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    justify-items: center;
+    gap: 40px 60px;
     max-width: 1100px;
     margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.band-members::before,
+.band-members::after {
+    content: "";
+    flex: 1 1 320px;
+    max-width: 320px;
+    height: 0;
 }
 
 .member {
+    flex: 0 0 320px;
     width: 320px;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -249,8 +269,12 @@ footer {
         display: none !important;
     }
 
+    .logo-wrapper {
+        max-width: 70vw;
+    }
+
     .logo {
-        max-width: 80vw;
+        max-width: 100%;
         max-height: 12vh;
         width: auto;
         height: auto;
@@ -260,17 +284,20 @@ footer {
     .menu-toggle:checked ~ .mobile-menu {
         opacity: 1 !important;
         visibility: visible !important;
-        transition: opacity 0.4s ease;
     }
 
     .band-members {
-        grid-template-columns: 1fr;
-        justify-content: center;
-        justify-items: center;
+        gap: 30px;
         padding: 0 10px;
     }
 
+    .band-members::before,
+    .band-members::after {
+        content: none;
+    }
+
     .member {
+        flex: 0 0 100%;
         width: 100%;
         max-width: 360px;
     }
