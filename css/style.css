@@ -180,6 +180,24 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
+/* Hero band image - centered under nav */
+.hero-band {
+    text-align: center;
+    margin: 20px auto 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 800px;             /* caps desktop size - adjust if needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
 /* Story & Inspires sections */
 .story-section,
 .inspires-section {
@@ -260,13 +278,13 @@ h2, h4 {
     color: #555;
 }
 
-/* Social section - spacing tweaks */
+/* Social section */
 .social {
-    margin-top: 40px;     /* space from preceding section */
-    margin-bottom: 5px;   /* very tight to footer – cut significantly */
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-/* Extra top margin on Meet the Band (index page) */
+/* Extra top margin on Meet the Band */
 #meet-the-band {
     margin-top: 100px;
 }
@@ -281,13 +299,13 @@ h2, h4 {
     margin-bottom: 80px;
 }
 
-/* Footer - minimal top margin */
+/* Footer */
 footer {
     background-color: var(--primary-dark);
     color: white;
     text-align: center;
-    padding: 24px 0 30px 0;
-    margin-top: 5px;      /* almost no gap from social */
+    padding: 24px;
+    margin-top: 20px;
 }
 
 /* Mobile adjustments */
@@ -316,6 +334,16 @@ footer {
         opacity: 1 !important;
         visibility: visible !important;
         transition: opacity 0.4s ease;
+    }
+
+    .hero-band {
+        margin: 15px auto 40px auto;
+    }
+
+    .hero-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     .story-container,
@@ -350,11 +378,10 @@ footer {
 
     .social {
         margin-top: 30px;
-        margin-bottom: 0px;   /* very tight on mobile too */
+        margin-bottom: 15px;
     }
 
     footer {
-        margin-top: 0px;
-        padding: 20px 0;
+        margin-top: 15px;
     }
 }
