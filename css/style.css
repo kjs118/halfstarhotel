@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel - FINAL WORKING VERSION */
+/* css/style.css - Half Star Hotel shared styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -60,6 +60,7 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Logo wrapper to limit click area */
 .logo-wrapper {
     display: inline-block;
     max-width: 60%;
@@ -161,7 +162,25 @@ header {
     cursor: pointer;
 }
 
-/* Hero band image (top of index) */
+/* Main content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+h2, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Hero band image - centered under nav */
 .hero-band {
     text-align: center;
     margin: 20px auto 50px auto;
@@ -171,7 +190,7 @@ header {
 
 .hero-img {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px;             /* caps desktop size - adjust if needed */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -215,7 +234,7 @@ header {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Band members - working centered 3+2 layout */
+/* Band members */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -265,77 +284,17 @@ header {
     margin-bottom: 20px;
 }
 
-/* Contact form - spiced up */
-#contact {
-    background: #ffffff;
-    border: 1px solid var(--card-border);
-    border-radius: 12px;
-    padding: 50px 40px;
-    max-width: 720px;
-    margin: 0 auto 40px auto;
-    box-shadow: var(--card-shadow);
+/* Extra top margin on Meet the Band */
+#meet-the-band {
+    margin-top: 100px;
 }
 
-#contact h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
+/* Events - space after last event */
+.event:last-child {
+    margin-bottom: 80px;
 }
 
-#contact h3 {
-    margin-bottom: 25px;
-    font-size: 1.4em;
-    color: #555;
-}
-
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-}
-
-#contact label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    display: block;
-    color: #333;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 16px 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1.05em;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
-}
-
-#contact button {
-    background: var(--primary-dark);
-    color: white;
-    padding: 16px 36px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.15em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    align-self: flex-start;
-}
-
-#contact button:hover {
-    background: #222;
-}
-
-/* Events & Gallery spacing */
-.event:last-child,
+/* Gallery - space after last item */
 .gallery-item:last-child {
     margin-bottom: 80px;
 }
@@ -384,6 +343,7 @@ footer {
     .hero-img {
         max-width: 100%;
         border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     .story-container,
@@ -419,11 +379,6 @@ footer {
     .social {
         margin-top: 30px;
         margin-bottom: 15px;
-    }
-
-    #contact {
-        padding: 40px 25px;
-        margin: 0 20px 30px 20px;
     }
 
     footer {
