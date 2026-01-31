@@ -263,4 +263,7 @@ footer {
         width: 100%;
         max-width: 360px;
     }
+    .band-members {
+    border: 2px solid red !important; /* temporary debug border */
+}
 }
