@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Star Hotel</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+            color: #333; 
+        }
+        header { 
+            background-color: #ffffff; 
+            color: #333; 
+            padding: 40px 20px; 
+            text-align: center; 
+            border-bottom: 1px solid #ddd; 
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 3em; 
+        }
+        nav { 
+            background-color: #ffffff; 
+            padding: 15px; 
+            border-bottom: 1px solid #ddd; 
+        }
+        nav ul { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+        }
+        nav ul li { 
+            margin: 0 25px; 
+        }
+        nav ul li a { 
+            color: #000000; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.2em; 
+        }
+        nav ul li a:hover { 
+            text-decoration: underline; 
+        }
+        nav ul li a.active { 
+            text-decoration: underline; 
+            text-decoration-thickness: 3px; 
+            text-underline-offset: 5px; 
+        }
+        main { 
+            padding: 40px 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        section { 
+            margin-bottom: 60px; 
+            text-align: center; 
+        }
+        h2, h4 { 
+            margin-bottom: 20px; 
+        }
+        .band-members { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+        }
+        .member { 
+            text-align: center; 
+            max-width: 220px; 
+            flex: 1 1 180px; 
+        }
+        .member img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+        }
+        footer { 
+            background-color: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px; 
+        }
+        @media (max-width: 768px) {
+            .band-members {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Half Star Hotel</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome</h2>
+            <h1>Half Star Hotel</h1>
+        </section>
+
+        <section id="story">
+            <h4>Our Story</h4>
+            <p>Half Star Hotel's sole purpose is to capture the essence of what a live show is all about: great rock and roll. We only play music that speaks to our hearts and souls. Our onstage performances are filled with an intensity and excitement that quickly permeates throughout the audience. We don't want you to just watch a show, but to share in a rock and roll experience with us.</p>
+        </section>
+
+        <section id="inspires">
+            <h4>What Inspires Us</h4>
+            <p>While each member of the band is influenced by countless artists from every decade, classic and current, the inspiration that we wear on our sleeves comes from the rock era of the '60s and '70s.</p>
+        </section>
+
+        <section id="meet-the-band">
+            <h2>Meet the Band</h2>
+            <div class="band-members">
+                <div class="member">
+                    <img src="assets/rob-hunt.jpg" alt="Rob Hunt">
+                    <h4>Rob Hunt</h4>
+                    <p>Lead Vocals, Harmonica</p>
+                </div>
+                <div class="member">
+                    <img src="assets/kevin-marini.jpg" alt="Kevin Marini">
+                    <h4>Kevin Marini</h4>
+                    <p>Bass, Keyboards, Vocals</p>
+                </div>
+                <div class="member">
+                    <img src="assets/larry-marini.jpg" alt="Larry Marini">
+                    <h4>Larry Marini</h4>
+                    <p>Guitars</p>
+                </div>
+                <div class="member">
+                    <img src="assets/steve-linton.jpg" alt="Steve Linton">
+                    <h4>Steve Linton</h4>
+                    <p>Drums</p>
+                </div>
+                <div class="member">
+                    <img src="assets/keith-stewart.jpg" alt="Keith Stewart">
+                    <h4>Keith Stewart</h4>
+                    <p>Guitars</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright © 2025 Half Star Hotel - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
