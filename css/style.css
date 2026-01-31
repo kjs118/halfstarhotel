@@ -20,60 +20,55 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
     background-color: #ffffff;
-    color: var(--text);
-    padding: 40px 20px;
-    text-align: center;
     border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 3em;
-    font-weight: bold;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    position: relative;
 }
+
+/* Logo */
+.logo-link {
+    flex: 1;
+    text-align: center;
+}
+
 .logo {
-    max-width: 400px;          /* Adjust this based on your logo's size – start here and tweak */
-    width: 100%;               /* Makes it responsive on mobile */
-    height: auto;              /* Keeps proportions */
-    display: block;            /* Centers it nicely */
-    margin: 0 auto;            /* Centers horizontally */
-    transition: transform 0.3s ease;  /* Optional subtle hover effect */
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.05);    /* Slight zoom on hover for fun */
+    transform: scale(1.05);
 }
 
-/* Optional: Make header padding adjust if logo is tall */
-header {
-    padding: 20px 20px;        /* Reduced from 40px if logo takes more vertical space */
+/* Desktop nav (horizontal links) */
+.desktop-nav {
+    display: block;
 }
 
-/* For very wide logos or mobile */
-@media (max-width: 768px) {
-    .logo {
-        max-width: 300px;      /* Smaller on phones */
-    }
-}
-nav {
-    background-color: #ffffff;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav ul {
+.desktop-nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
+.desktop-nav ul li a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
@@ -81,14 +76,105 @@ nav ul li a {
     transition: all 0.2s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+.desktop-nav ul li a:hover,
+.desktop-nav ul li a.active {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;
     color: var(--accent);
 }
 
+/* Hamburger (mobile only) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;                    /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    padding-left: 15px;               /* space from left edge of screen */
+}
+
+.hamburger span {
+    background: #000;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger → X animation when open */
+.menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Full-screen mobile menu overlay */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-menu ul li {
+    margin: 30px 0;
+}
+
+.mobile-menu ul li a {
+    color: #000;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Close button (X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* Main content */
 main {
     padding: 40px 20px;
     max-width: 1200px;
@@ -129,6 +215,7 @@ h2, h4 {
     transform: scale(1.05);
 }
 
+/* Footer */
 footer {
     background-color: var(--primary-dark);
     color: white;
@@ -137,19 +224,46 @@ footer {
     margin-top: 60px;
 }
 
-/* Mobile adjustments */
+/* Mobile-only adjustments */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 20px;
+    /* Show hamburger, hide desktop nav */
+    .hamburger {
+        display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Logo: much smaller (~1/8 screen height) */
+    .logo {
+        max-width: 80vw;           /* prevent overflow */
+        max-height: 12vh;          /* ≈1/8 of typical mobile screen height */
+        width: auto;
+        height: auto;
+    }
+
+    .logo-link {
+        flex: 1;
+        text-align: center;
+        margin-left: 40px;         /* offset to center better with hamburger on left */
+    }
+
+    /* Show full-screen menu when checkbox is checked */
+    .menu-toggle:checked ~ .mobile-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Optional: blur/dim background content when menu is open */
+    .menu-toggle:checked ~ main,
+    .menu-toggle:checked ~ footer {
+        filter: blur(3px) brightness(0.7);
+        pointer-events: none;
     }
 
     .band-members {
         flex-direction: column;
         align-items: center;
-    }
-
-    header h1 {
-        font-size: 2.4em;
     }
 }
