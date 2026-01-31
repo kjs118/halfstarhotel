@@ -21,12 +21,9 @@
             <span></span>
         </label>
 
-        <!-- Narrower wrapper for logo link -->
-        <div class="logo-wrapper">
-            <a href="index.html" class="logo-link">
-                <img src="assets/halfstar.jpg" alt="Half Star Hotel" class="logo">
-            </a>
-        </div>
+        <a href="index.html" class="logo-link">
+            <img src="assets/halfstar.jpg" alt="Half Star Hotel" class="logo">
+        </a>
     </div>
 
     <nav class="desktop-nav">
@@ -95,23 +92,21 @@
 <footer>
     <p>Copyright © 2025 Half Star Hotel - All Rights Reserved.</p>
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.querySelector('.mobile-menu');
 
-        if (toggle && menu) {
-            toggle.addEventListener('change', function() {
-                if (this.checked) {
-                    menu.style.opacity = '1';
-                    menu.style.visibility = 'visible';
-                } else {
-                    menu.style.opacity = '0';
-                    menu.style.visibility = 'hidden';
-                }
-            });
-        }
-    });
+<!-- Hamburger fallback script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    
+    if (toggle && menu) {
+        toggle.addEventListener('change', function() {
+            menu.style.opacity = this.checked ? '1' : '0';
+            menu.style.visibility = this.checked ? 'visible' : 'hidden';
+        });
+    }
+});
 </script>
+
 </body>
 </html>
