@@ -216,8 +216,16 @@ footer {
     margin-top: 80px;
 }
 
-/* Mobile */
+/* Mobile */ 
 @media (max-width: 768px) {
+    .logo {
+        max-width: 80vw;               /* still prevents horizontal overflow */
+        max-height: 12vh;              /* keep your preferred height limit */
+        width: auto;                   /* ← crucial: let natural width scale */
+        height: auto;                  /* ← crucial: preserve aspect ratio */
+        object-fit: contain;           /* prevent any forced squish */
+    }
+}(max-width: 768px) {
     .hamburger {
         display: flex;
     }
