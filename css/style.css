@@ -34,7 +34,7 @@ header {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20px 10px;
     text-align: center;
 }
 
@@ -112,6 +112,12 @@ header {
     align-items: center;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+
+.mobile-menu[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
     transition: opacity 0.4s ease;
 }
 
@@ -169,7 +175,7 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members - fixed centering for all rows */
+/* Band members – centered rows on desktop */
 .band-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
@@ -177,11 +183,11 @@ h2, h4 {
     justify-content: center;
     justify-items: center;
     max-width: 1100px;
-    margin: 0 auto 60px;
+    margin: 0 auto 60px auto;
 }
 
 .member {
-    width: 320px;                  /* fixed width → even columns & perfect centering */
+    width: 320px;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
@@ -222,14 +228,14 @@ footer {
     margin-top: 80px;
 }
 
-/* Mobile adjustments - stronger rules */
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex !important;          /* force show */
+        display: flex !important;
     }
 
     .desktop-nav {
-        display: none !important;          /* force hide desktop nav */
+        display: none !important;
     }
 
     .logo {
@@ -240,10 +246,11 @@ footer {
         object-fit: contain;
     }
 
-    /* Menu visibility - use !important to override any conflicts */
+    /* Force mobile menu visibility */
     .menu-toggle:checked ~ .mobile-menu {
         opacity: 1 !important;
         visibility: visible !important;
+        transition: opacity 0.4s ease;
     }
 
     .band-members {
