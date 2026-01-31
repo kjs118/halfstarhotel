@@ -12,34 +12,36 @@
 <body>
  <header>
     <div class="header-container">
-        <!-- Hamburger toggle (mobile only) -->
+        <!-- Hidden checkbox for toggle -->
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <!-- Hamburger icon (mobile only) -->
         <label for="menu-toggle" class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </label>
 
-        <!-- Logo (always visible) -->
+        <!-- Centered logo -->
         <a href="index.html" class="logo-link">
             <img src="assets/halfstar.jpg" alt="Half Star Hotel" class="logo">
         </a>
-
-        <!-- Desktop nav (hidden on mobile) -->
-        <nav class="desktop-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="connect.html">Connect</a></li>
-            </ul>
-        </nav>
     </div>
+
+    <!-- Desktop navigation - below logo -->
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="connect.html">Connect</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Full-screen mobile menu overlay -->
+<!-- Full-screen mobile menu -->
 <nav class="mobile-menu">
-    <label for="menu-toggle" class="close-btn">&times;</label>
+    <label for="menu-toggle" class="close-btn">×</label>
     <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
