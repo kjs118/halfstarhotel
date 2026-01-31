@@ -33,7 +33,30 @@ header h1 {
     font-size: 3em;
     font-weight: bold;
 }
+.logo {
+    max-width: 400px;          /* Adjust this based on your logo's size – start here and tweak */
+    width: 100%;               /* Makes it responsive on mobile */
+    height: auto;              /* Keeps proportions */
+    display: block;            /* Centers it nicely */
+    margin: 0 auto;            /* Centers horizontally */
+    transition: transform 0.3s ease;  /* Optional subtle hover effect */
+}
 
+.logo:hover {
+    transform: scale(1.05);    /* Slight zoom on hover for fun */
+}
+
+/* Optional: Make header padding adjust if logo is tall */
+header {
+    padding: 20px 20px;        /* Reduced from 40px if logo takes more vertical space */
+}
+
+/* For very wide logos or mobile */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 300px;      /* Smaller on phones */
+    }
+}
 nav {
     background-color: #ffffff;
     padding: 15px;
