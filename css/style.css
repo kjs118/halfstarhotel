@@ -24,7 +24,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* Header */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
@@ -156,7 +156,6 @@ main {
     padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
-    background: #ffffff;
 }
 
 section {
@@ -170,7 +169,7 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members grid */
+/* Band members - fixed centering for all rows */
 .band-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
@@ -178,12 +177,11 @@ h2, h4 {
     justify-content: center;
     justify-items: center;
     max-width: 1100px;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 60px;
 }
 
 .member {
-    width: 100%;
-    max-width: 320px;
+    width: 320px;                  /* fixed width → even columns & perfect centering */
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
@@ -224,14 +222,14 @@ footer {
     margin-top: 80px;
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments - stronger rules */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
+        display: flex !important;          /* force show */
     }
 
     .desktop-nav {
-        display: none;
+        display: none !important;          /* force hide desktop nav */
     }
 
     .logo {
@@ -242,13 +240,21 @@ footer {
         object-fit: contain;
     }
 
+    /* Menu visibility - use !important to override any conflicts */
     .menu-toggle:checked ~ .mobile-menu {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .band-members {
         grid-template-columns: 1fr;
+        justify-content: center;
         justify-items: center;
+        padding: 0 10px;
+    }
+
+    .member {
+        width: 100%;
+        max-width: 360px;
     }
 }
