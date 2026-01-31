@@ -216,7 +216,7 @@ h2, h4 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Band members */
+/* Band members - restored working centered 3+2 layout */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -260,24 +260,24 @@ h2, h4 {
     color: #555;
 }
 
-/* Social section - reduced bottom margin */
+/* Social section */
 .social {
-    margin-bottom: 40px; /* less space to footer */
+    margin-bottom: 40px;
 }
 
-/* Extra top margin on Meet the Band to create more space above social */
+/* Extra top margin on Meet the Band */
 #meet-the-band {
-    margin-top: 100px; /* increased space between band cards and social */
+    margin-top: 100px;
 }
 
-/* Events page - more space after last event */
+/* Events - space after last event */
 .event:last-child {
-    margin-bottom: 80px; /* more space before social */
+    margin-bottom: 80px;
 }
 
-/* Gallery page - more space after last gallery item */
+/* Gallery - space after last item */
 .gallery-item:last-child {
-    margin-bottom: 80px; /* more space before social */
+    margin-bottom: 80px;
 }
 
 /* Footer */
@@ -286,7 +286,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 40px; /* reduced space from social */
+    margin-top: 40px;
 }
 
 /* Mobile adjustments */
@@ -325,7 +325,7 @@ footer {
 
     .story-image,
     .inspires-image {
-        order: -1; /* image on top */
+        order: -1;
     }
 
     .story-text,
@@ -344,7 +344,7 @@ footer {
     }
 
     #meet-the-band {
-        margin-top: 60px; /* smaller on mobile */
+        margin-top: 60px;
     }
 
     .social {
