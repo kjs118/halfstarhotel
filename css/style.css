@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel - FINAL VERSION */
+/* css/style.css - Half Star Hotel shared styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -60,7 +60,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Logo wrapper to prevent click overlap with hamburger */
+/* Logo wrapper to limit click area */
 .logo-wrapper {
     display: inline-block;
     max-width: 60%;
@@ -180,23 +180,14 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Band members - FINAL centered 3+2 layout */
+/* Band members - centered 3+2 layout on desktop */
 .band-members {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px 60px;
+    gap: 40px;
     max-width: 1100px;
     margin: 0 auto 60px auto;
-    padding: 0 20px;
-}
-
-.band-members::before,
-.band-members::after {
-    content: "";
-    flex: 1 1 320px;
-    max-width: 320px;
-    height: 0;
 }
 
 .member {
@@ -284,16 +275,11 @@ footer {
     .menu-toggle:checked ~ .mobile-menu {
         opacity: 1 !important;
         visibility: visible !important;
+        transition: opacity 0.4s ease;
     }
 
     .band-members {
         gap: 30px;
-        padding: 0 10px;
-    }
-
-    .band-members::before,
-    .band-members::after {
-        content: none;
     }
 
     .member {
