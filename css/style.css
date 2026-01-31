@@ -262,8 +262,8 @@ h2, h4 {
 
 /* Social section - spacing tweaks */
 .social {
-    margin-top: 40px;     /* space from preceding section (band/last item) */
-    margin-bottom: 10px;  /* cut in half or less - very tight to footer */
+    margin-top: 40px;     /* space from preceding section */
+    margin-bottom: 5px;   /* very tight to footer – cut significantly */
 }
 
 /* Extra top margin on Meet the Band (index page) */
@@ -281,13 +281,13 @@ h2, h4 {
     margin-bottom: 80px;
 }
 
-/* Footer - minimal top margin to hug social */
+/* Footer - minimal top margin */
 footer {
     background-color: var(--primary-dark);
     color: white;
     text-align: center;
     padding: 24px 0 30px 0;
-    margin-top: 10px;     /* very small gap from social */
+    margin-top: 5px;      /* almost no gap from social */
 }
 
 /* Mobile adjustments */
@@ -350,7 +350,7 @@ footer {
 
     .social {
         margin-top: 30px;
-        margin-bottom: 5px;  /* even tighter on mobile */
+        margin-bottom: 5px;   /* very tight on mobile too */
     }
 
     footer {
