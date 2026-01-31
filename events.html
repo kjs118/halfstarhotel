@@ -6,10 +6,11 @@
     <title>Events | Half Star Hotel</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <div class="header-container">
         <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -29,8 +30,8 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="events.html" class="active">Events</a></li><!-- active here -->
-            <li><a href="connect.html">Connect</a></li> 
+            <li><a href="events.html" class="active">Events</a></li>
+            <li><a href="connect.html">Connect</a></li>
         </ul>
     </nav>
 </header>
@@ -40,40 +41,61 @@
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="connect.html" class="active">Connect</a></li> <!-- active here too -->
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="connect.html">Connect</a></li>
     </ul>
 </nav>
-    <main>
-        <p>Mark your calendars and check back often for Half Star Hotel shows.</p>
-        <div class="event">
-            <h3>6/13/20 - The Last Resort</h3>
-            <p>8:00 pm - Smithfield, RI</p>
-            <p>Address: 325 Farnum Pike, Smithfield, RI 02917</p>
-        </div>
-        <div class="event">
-            <h3>7/25/20 - Lou's Cafe</h3>
-            <p>9:00 pm - Manville, RI</p>
-            <p>Address: 47 Summer St. Manville, RI 02838</p>
-        </div>
-        <div class="event">
-            <h3>8/8/20 - Narragansett Cafe</h3>
-            <p>9:00 pm - Jamestown, RI</p>
-            <p>Address: 25 Narragansett Ave, Jamestown, RI 02835</p>
-        </div>
-        <div class="event">
-            <h3>9/12/20 - Lou's Cafe</h3>
-            <p>9:00 pm - Manville, RI</p>
-            <p>Address: 47 Summer St. Manville, RI 02838</p>
-        </div>
-        <div class="event">
-            <h3>10/24/20 - Narragansett Cafe</h3>
-            <p>9:00 pm - Jamestown, RI</p>
-            <p>Address: 25 Narragansett Ave, Jamestown, RI 02835</p>
-        </div>
-    </main>
-    <footer>
-        <p>Copyright © 2018 Half Star Hotel - All Rights Reserved.</p>
-    </footer>
+
+<main>
+    <p>Mark your calendars and check back often for Half Star Hotel shows.</p>
+
+    <div class="event">
+        <h3>6/13/20 - The Last Resort</h3>
+        <p>8:00 pm - Smithfield, RI</p>
+        <p>Address: 325 Farnum Pike, Smithfield, RI 02917</p>
+    </div>
+
+    <div class="event">
+        <h3>7/25/20 - Lou's Cafe</h3>
+        <p>9:00 pm - Manville, RI</p>
+        <p>Address: 47 Summer St. Manville, RI 02838</p>
+    </div>
+
+    <div class="event">
+        <h3>8/8/20 - Narragansett Cafe</h3>
+        <p>9:00 pm - Jamestown, RI</p>
+        <p>Address: 25 Narragansett Ave, Jamestown, RI 02835</p>
+    </div>
+
+    <div class="event">
+        <h3>9/12/20 - Lou's Cafe</h3>
+        <p>9:00 pm - Manville, RI</p>
+        <p>Address: 47 Summer St. Manville, RI 02838</p>
+    </div>
+
+    <div class="event">
+        <h3>10/24/20 - Narragansett Cafe</h3>
+        <p>9:00 pm - Jamestown, RI</p>
+        <p>Address: 25 Narragansett Ave, Jamestown, RI 02835</p>
+    </div>
+</main>
+
+<footer>
+    <p>Copyright © 2025 Half Star Hotel - All Rights Reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.querySelector('.mobile-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('change', function() {
+                menu.style.opacity = this.checked ? '1' : '0';
+                menu.style.visibility = this.checked ? 'visible' : 'hidden';
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
