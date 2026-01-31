@@ -179,15 +179,15 @@ h2, h4 {
 .band-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-    gap: 40px;
-    justify-content: center;
-    justify-items: center;
-    max-width: 1100px;
-    margin: 0 auto 60px auto;
+    gap: 40px;                      /* even spacing */
+    justify-content: center;        /* centers the whole grid horizontally */
+    justify-items: center;          /* centers each card in its grid cell */
+    max-width: 1100px;              /* limits total width so centering has room */
+    margin: 0 auto 60px auto;       /* centers container + bottom margin */
 }
 
 .member {
-    width: 320px;
+    width: 320px;                   /* fixed width → forces even columns & perfect centering */
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
@@ -196,7 +196,6 @@ h2, h4 {
     transition: all 0.25s ease;
     text-align: center;
 }
-
 .member:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
