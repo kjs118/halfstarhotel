@@ -1,10 +1,12 @@
 /* css/style.css - Half Star Hotel shared styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
+
 :root {
     --primary-dark: #333;
     --primary-light: #f4f4f4;
     --text: #333;
-    --accent: #000; /* for underlines, buttons */
+    --accent: #000;
 }
 
 * {
@@ -14,7 +16,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     background-color: var(--primary-light);
     color: var(--text);
     line-height: 1.6;
@@ -29,16 +31,49 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;          /* centers logo perfectly */
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px 20px;
     position: relative;
 }
 
-/* Logo */
+/* Hamburger (left side) */
+.hamburger {
+    position: absolute;
+    left: 20px;                       /* padded from left edge */
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;                    /* hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    background: #000;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation to X */
+.menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Logo - always centered */
 .logo-link {
-    flex: 1;
     text-align: center;
 }
 
@@ -55,15 +90,19 @@ header {
     transform: scale(1.05);
 }
 
-/* Desktop nav (horizontal links) */
+/* Desktop nav - now BELOW logo, centered and even */
 .desktop-nav {
     display: block;
+    width: 100%;
+    margin-top: 10px;                 /* space below logo */
+    text-align: center;
 }
 
 .desktop-nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    justify-content: center;
+    gap: 50px;                        /* even spacing */
     margin: 0;
     padding: 0;
 }
@@ -71,7 +110,8 @@ header {
 .desktop-nav ul li a {
     color: #000;
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 1.2em;
     transition: all 0.2s ease;
 }
@@ -84,43 +124,12 @@ header {
     color: var(--accent);
 }
 
-/* Hamburger (mobile only) */
+/* Checkbox hidden */
 .menu-toggle {
     display: none;
 }
 
-.hamburger {
-    display: none;                    /* hidden on desktop */
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 22px;
-    cursor: pointer;
-    padding-left: 15px;               /* space from left edge of screen */
-}
-
-.hamburger span {
-    background: #000;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Hamburger → X animation when open */
-.menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle:checked + .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
-
-/* Full-screen mobile menu overlay */
+/* Full-screen mobile menu */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -144,33 +153,33 @@ header {
 }
 
 .mobile-menu ul li {
-    margin: 30px 0;
+    margin: 35px 0;
 }
 
 .mobile-menu ul li a {
     color: #000;
-    font-size: 2.2em;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4em;
+    font-weight: 700;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .mobile-menu ul li a:hover,
 .mobile-menu ul li a.active {
-    color: #555;
+    color: #444;
     text-decoration: underline;
 }
 
-/* Close button (X) */
+/* Close X - standard top-right */
 .close-btn {
     position: absolute;
     top: 20px;
     right: 25px;
-    font-size: 3.5em;
+    font-size: 4em;
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    text-decoration: none;
     line-height: 1;
 }
 
@@ -187,6 +196,8 @@ section {
 }
 
 h2, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -215,7 +226,6 @@ h2, h4 {
     transform: scale(1.05);
 }
 
-/* Footer */
 footer {
     background-color: var(--primary-dark);
     color: white;
@@ -224,9 +234,8 @@ footer {
     margin-top: 60px;
 }
 
-/* Mobile-only adjustments */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    /* Show hamburger, hide desktop nav */
     .hamburger {
         display: flex;
     }
@@ -235,27 +244,21 @@ footer {
         display: none;
     }
 
-    /* Logo: much smaller (~1/8 screen height) */
+    /* Logo size (you said perfect - keeping ~1/8 height) */
     .logo {
-        max-width: 80vw;           /* prevent overflow */
-        max-height: 12vh;          /* ≈1/8 of typical mobile screen height */
+        max-width: 80vw;
+        max-height: 12vh;
         width: auto;
         height: auto;
     }
 
-    .logo-link {
-        flex: 1;
-        text-align: center;
-        margin-left: 40px;         /* offset to center better with hamburger on left */
-    }
-
-    /* Show full-screen menu when checkbox is checked */
+    /* Show full-screen menu when open */
     .menu-toggle:checked ~ .mobile-menu {
         opacity: 1;
         visibility: visible;
     }
 
-    /* Optional: blur/dim background content when menu is open */
+    /* Blur background when menu open */
     .menu-toggle:checked ~ main,
     .menu-toggle:checked ~ footer {
         filter: blur(3px) brightness(0.7);
