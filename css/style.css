@@ -181,11 +181,14 @@ h2, h4 {
 }
 
 /* Hero band image - centered under nav */
-.hero-band {
-    text-align: center;
-    margin: 20px auto 50px auto;
-    max-width: 1200px;
-    padding: 0 20px;
+.hero-img {
+    width: 100%;
+    max-width: 800px;             /* desktop max - adjust if you want bigger/smaller */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .hero-img {
