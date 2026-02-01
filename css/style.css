@@ -394,50 +394,44 @@ footer {
    CENTERED STACKED CONTACT FORM
 ========================= */
 
-#contact {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
+/* Contact Form Styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  gap: 15px; /* space between each input */
 }
 
-/* Form container */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 25px;
-    text-align: left; /* keeps labels aligned */
-}
-
-/* Each field group */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-/* Labels */
 .contact-form label {
-    font-weight: 600;
-    font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-/* Inputs & textarea */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 14px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Inter', sans-serif;
-    transition: 0.2s ease;
+.contact-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* full width of the form column */
+  box-sizing: border-box;
 }
 
-/* Textarea height control */
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
+.contact-form button {
+  margin-top: 0.5rem;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  background: #ff0000; /* Thunder Child red */
+  color: #fff;
+
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 4px 0 #b30000;
 }
 
 /* Focus effect */
