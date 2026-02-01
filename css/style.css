@@ -663,6 +663,42 @@ footer {
         width: 100%;
     }
 }
+
+.photo-carousel {
+  max-width: 1000px;       /* optional wrapper max width */
+  margin: 50px auto;       /* centers section */
+  padding: 0 10px;
+}
+
+.carousel-container {
+  overflow-x: auto;        /* allows horizontal scroll */
+  scroll-snap-type: x mandatory; /* snap scrolling */
+  display: flex;
+  gap: 12px;
+  scroll-behavior: smooth; /* smooth scrolling */
+  padding-bottom: 10px;    /* space for scrollbar */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;          /* prevents shrinking */
+  width: 250px;            /* adjust for desired size */
+  height: 180px;           /* adjust for desired size */
+  object-fit: cover;       /* crop nicely */
+  border-radius: 8px;
+  scroll-snap-align: start; /* snaps to start of each item */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
 /* .carousel {
     width: 100%;
     overflow-x: auto;
