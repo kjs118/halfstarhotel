@@ -701,9 +701,9 @@ footer {
 
 .carousel-container {
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
   display: flex;
   gap: 12px;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding-bottom: 10px;
 }
@@ -715,8 +715,8 @@ footer {
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 250px;        /* desktop default size */
-  height: 180px;
+  width: clamp(200px, 20%, 250px);   /* responsive width */
+  aspect-ratio: 5 / 3;               /* keeps height proportional */
   object-fit: cover;
   border-radius: 8px;
   scroll-snap-align: start;
