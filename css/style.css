@@ -200,13 +200,10 @@ h2, h4 {
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
-/* Our Story image (inside left/right section) */
-.story-img,
-.inspires-img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+/* Story & Inspires sections */
+.story-section,
+.inspires-section {
+    margin-bottom: 80px;
 }
 
 .story-container,
@@ -231,6 +228,13 @@ h2, h4 {
     min-width: 300px;
 }
 
+.story-img,
+.inspires-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
 
 /* Band members */
 .band-members {
@@ -347,10 +351,15 @@ footer {
         border-radius: 8px;
         box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
-    .story-container,
+   .story-container,
     .inspires-container {
         flex-direction: column;
         gap: 30px;
+    }
+
+    .story-image,
+    .inspires-image {
+        order: -1;
     }
 
     .story-text,
