@@ -336,9 +336,6 @@ footer {
         transition: opacity 0.4s ease;
     }
 
-    .hero-band {
-        margin: auto;
-    }
 
     .hero-img {
         max-width: 100%;
