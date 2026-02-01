@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel shared styles */
+/* css/style.css - Half Star Hotel shared styles - RESTORED WORKING VERSION */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -63,7 +63,7 @@ header {
 /* Logo wrapper to limit click area */
 .logo-wrapper {
     display: inline-block;
-    max-width: 50%;
+    max-width: 60%;
     margin: 0 auto;
 }
 
@@ -180,26 +180,6 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
-/* Hero band image (top centered one) */
-.hero-img {
-    width: 100%;
-    max-width: 800px;             /* desktop max - adjust if you want bigger/smaller */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-.hero-img {
-    width: 100%;
-    max-width: 800px;             /* caps desktop size - adjust if needed */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
 /* Story & Inspires sections */
 .story-section,
 .inspires-section {
@@ -236,7 +216,7 @@ h2, h4 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Band members */
+/* Band members - working centered 3+2 layout */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -282,21 +262,20 @@ h2, h4 {
 
 /* Social section */
 .social {
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;  /* reduced space to footer */
 }
 
-/* Extra top margin on Meet the Band */
+/* Extra space above band cards on index */
 #meet-the-band {
-    margin-top: 100px;
+    margin-top: 100px;    /* more space between previous content and band cards */
 }
 
-/* Events - space after last event */
+/* Events - more space after last event */
 .event:last-child {
     margin-bottom: 80px;
 }
 
-/* Gallery - space after last item */
+/* Gallery - more space after last item */
 .gallery-item:last-child {
     margin-bottom: 80px;
 }
@@ -307,7 +286,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 20px;
+    margin-top: 40px;     /* reduced from social */
 }
 
 /* Mobile adjustments */
@@ -321,7 +300,7 @@ footer {
     }
 
     .logo-wrapper {
-        max-width: 50vw;
+        max-width: 70vw;
     }
 
     .logo {
@@ -338,20 +317,7 @@ footer {
         transition: opacity 0.4s ease;
     }
 
-    .hero-band {
-        margin: 15px auto 40px auto;
-    }
-
-  /* Mobile - make both images match full container width */
-/*@media (max-width: 768px) {
-    .hero-img,
-    .story-img,
-    .inspires-img {
-        max-width: 100%;          /* both take full available width on mobile */
-        border-radius: 8px;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    } */
-   .story-container,
+    .story-container,
     .inspires-container {
         flex-direction: column;
         gap: 30px;
@@ -382,80 +348,10 @@ footer {
     }
 
     .social {
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     footer {
-        margin-top: 15px;
+        margin-top: 30px;
     }
-}
-}
-/* ================= CONTACT FORM ONLY ================= */
-
-#contact {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  text-align: left;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.send-btn {
-display: flex;
-  flex-direction: column;
-    max-width: 520px;
-  margin: 0 auto;
-    width: 100%;
-  margin-top: 10px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-}
-
-/* Desktop — labels above fields, fields centered */
-@media (min-width: 769px) {
-  .contact-form {
-    align-items: center;
-  }
-
-  .form-group {
-    max-width: 520px;
-  }
 }
