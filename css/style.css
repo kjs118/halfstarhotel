@@ -366,47 +366,46 @@ h2, h4 {
     .event {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
         padding: 16px 0;
+        gap: 14px;
     }
 
-    /* Left column = date only */
+    /* LEFT COLUMN = DATE ONLY */
     .event-left {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        min-width: 90px;
-        gap: 4px;
+        flex: 0 0 85px;   /* fixed date column */
     }
 
     .event-date {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         font-weight: 700;
         line-height: 1.2;
     }
 
-    /* Venue moves to right column visually */
+    /* VENUE SHOULD NOT LIVE IN LEFT COLUMN VISUALLY */
     .event-venue {
         font-size: 1.15rem;
         font-weight: 600;
-        line-height: 1.25;
+        margin-bottom: 4px;
     }
 
-    /* Right column = venue + location + address */
+    /* RIGHT COLUMN = TAKES ALL REMAINING SPACE */
     .event-right {
-        text-align: left;
+        flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 2px;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .event-location,
     .event-address {
         font-size: 0.9rem;
-        opacity: 0.7;
+        opacity: 0.75;
         line-height: 1.35;
     }
 }
-
 
 
 
