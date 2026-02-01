@@ -522,7 +522,7 @@ display: inline-block;
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Mobile — same as above, but full width */
+/* Mobile — stack fields and make button full width */
 @media (max-width: 640px) {
     .form-group {
         max-width: 100%;
@@ -533,8 +533,6 @@ display: inline-block;
     }
 }
 
-
-}
 
     footer {
         margin-top: 15px;
