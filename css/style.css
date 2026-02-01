@@ -364,50 +364,56 @@ h2, h4 {
 @media (max-width: 640px) {
 
     .event {
-        display: flex;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 85px 1fr; /* DATE column + DETAILS column */
+        grid-template-rows: auto auto auto;
+        column-gap: 14px;
+        row-gap: 2px;
+        align-items: start;
         padding: 16px 0;
-        gap: 14px;
     }
 
-    /* LEFT COLUMN = DATE ONLY */
-    .event-left {
-        display: flex;
-        flex-direction: column;
-        flex: 0 0 85px;   /* fixed date column */
-    }
-
+    /* Date = column 1, row 1 */
     .event-date {
+        grid-column: 1;
+        grid-row: 1;
         font-size: 1.1rem;
         font-weight: 700;
         line-height: 1.2;
     }
 
-    /* VENUE SHOULD NOT LIVE IN LEFT COLUMN VISUALLY */
+    /* Venue = column 2, row 1 */
     .event-venue {
+        grid-column: 2;
+        grid-row: 1;
         font-size: 1.15rem;
         font-weight: 600;
-        margin-bottom: 4px;
     }
 
-    /* RIGHT COLUMN = TAKES ALL REMAINING SPACE */
-    .event-right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        gap: 2px;
-    }
-
-    .event-location,
-    .event-address {
+    /* City/State = column 2, row 2 */
+    .event-location {
+        grid-column: 2;
+        grid-row: 2;
         font-size: 0.9rem;
         opacity: 0.75;
         line-height: 1.35;
     }
-}
 
+    /* Address = column 2, row 3 */
+    .event-address {
+        grid-column: 2;
+        grid-row: 3;
+        font-size: 0.9rem;
+        opacity: 0.75;
+        line-height: 1.35;
+    }
+
+    /* Disable old flex wrappers so they don't interfere */
+    .event-left,
+    .event-right {
+        display: contents;
+    }
+}
 
 
 /* ===== Gallery container ===== */
