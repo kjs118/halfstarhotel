@@ -382,7 +382,7 @@ footer {
         margin-top: 30px;
         margin-bottom: 15px;
     }
-
+display: inline-block;
 .gallery-details h2 { margin: 0 0 6px; }
 .gallery-details p { margin: 0 0 6px;; line-height: 1.5; }    
 
