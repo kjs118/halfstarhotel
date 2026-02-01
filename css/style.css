@@ -692,20 +692,20 @@ footer {
     }
 }
 
-
+/* ===== Gallery / Carousel ===== */
 .photo-carousel {
-  max-width: 1000px;       /* optional wrapper max width */
-  margin: 50px auto;       /* centers section */
+  max-width: 1000px;
+  margin: 50px auto;
   padding: 0 10px;
 }
 
 .carousel-container {
-  overflow-x: auto;        /* allows horizontal scroll */
-  scroll-snap-type: x mandatory; /* snap scrolling */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
   display: flex;
   gap: 12px;
-  scroll-behavior: smooth; /* smooth scrolling */
-  padding-bottom: 10px;    /* space for scrollbar */
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
 }
 
 .carousel-track {
@@ -714,12 +714,12 @@ footer {
 }
 
 .carousel-item {
-  flex: 0 0 auto;          /* prevents shrinking */
-  width: 250px;            /* adjust for desired size */
-  height: 180px;           /* adjust for desired size */
-  object-fit: cover;       /* crop nicely */
+  flex: 0 0 auto;
+  width: 250px;        /* desktop default size */
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
-  scroll-snap-align: start; /* snaps to start of each item */
+  scroll-snap-align: start;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
@@ -727,6 +727,20 @@ footer {
 .carousel-item:hover {
   transform: scale(1.05);
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 200px;      /* slightly smaller on mobile */
+    height: 140px;
+  }
+
+  .photo-carousel {
+    max-width: 100%;
+    padding: 0 10px 20px;
+  }
+}
+
 
 /* .carousel {
     width: 100%;
