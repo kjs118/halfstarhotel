@@ -445,7 +445,7 @@ display: inline-block;
 .gallery-details p { margin: 0 0 6px;; line-height: 1.5; }    
 
 /* =========================
-   SYMMETRICAL CONTACT FORM
+   CONTACT FORM (desktop & mobile unified)
 ========================= */
 
 #contact {
@@ -455,27 +455,30 @@ display: inline-block;
 }
 
 .contact-form {
-    display: grid;
-    grid-template-columns: 160px 1fr; /* label | field */
-    gap: 14px 18px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 16px;
     margin-top: 25px;
 }
 
-/* Remove old flex stacking */
+/* Each field container */
 .form-group {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 520px; /* desktop input width */
 }
 
 /* Labels */
 .contact-form label {
-    text-align: right;
+    text-align: left;  /* always left-aligned */
     font-weight: 600;
     font-size: 0.95rem;
-    padding-right: 6px;
+    margin-bottom: 6px;
 }
 
-/* Inputs + textarea */
+/* Inputs and textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -489,7 +492,7 @@ display: inline-block;
 
 /* Textarea height */
 .contact-form textarea {
-    min-height: 110px;
+    min-height: 120px;
     resize: vertical;
 }
 
@@ -501,11 +504,8 @@ display: inline-block;
     box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
 }
 
-/* Button spans both columns */
+/* Button styling */
 .send-btn {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin-top: 8px;
     padding: 12px 40px;
     font-size: 1rem;
     font-weight: 600;
@@ -522,21 +522,17 @@ display: inline-block;
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* MOBILE — stack fields */
+/* Mobile — same as above, but full width */
 @media (max-width: 640px) {
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form label {
-        text-align: left;
-        margin-top: 10px;
+    .form-group {
+        max-width: 100%;
     }
 
     .send-btn {
         width: 100%;
     }
 }
+
 
 }
 
