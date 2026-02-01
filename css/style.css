@@ -348,31 +348,41 @@ h2, h4 {
     margin-top: 4px;
 }
 
-/* ======================
-   MOBILE LAYOUT
-====================== */
-
 @media (max-width: 640px) {
+
     .event {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        align-items: start;
     }
 
+    /* First row: Date + Venue side by side */
     .event-left {
-        gap: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
     }
 
-    .event-right {
+    /* Second row: City */
+    .event-location {
         text-align: left;
     }
 
+    /* Third row: Address */
+    .event-address {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* Reduce font sizes slightly */
     .event-date,
     .event-venue,
     .event-location {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
     }
 }
+
 
 
 /* ===== Gallery container ===== */
