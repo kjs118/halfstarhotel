@@ -335,13 +335,48 @@ h2, h4 {
     text-align: left;
 }
 
-/* Right side: City + Address */
-.event-right {
-  text-align: left;  /* force left alignment */
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+/* Events: desktop layout */
+@media (min-width: 641px) {
+
+    .event {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px; /* space between date and details */
+        padding: 18px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Left column = date */
+    .event-date {
+        font-size: 1.8rem;
+        font-weight: 700;
+        min-width: 110px;
+        line-height: 1.2;
+    }
+
+    /* Right column = details stacked vertically */
+    .event-right {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1; /* takes remaining space */
+    }
+
+    .event-venue {
+        font-size: 1.6rem;
+        font-weight: 600;
+        opacity: 1;
+    }
+
+    .event-location,
+    .event-address {
+        font-size: 1rem;
+        font-weight: 400;
+        opacity: 0.75;
+        line-height: 1.3;
+    }
 }
+
 
 /* Desktop events: stack all details under date, left-aligned */
 @media (min-width: 641px) {
