@@ -395,7 +395,7 @@ footer {
 ========================= */
 
 /* Contact Form Styling */
-.contact-form form {
+.contact-form {
   display: flex;
   flex-direction: column; /* stack items vertically */
   gap: 15px; /* space between each input */
