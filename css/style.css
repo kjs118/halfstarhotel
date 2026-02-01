@@ -533,34 +533,41 @@ footer {
         margin-bottom: 15px;
     }
   @media (max-width: 768px) {
+  @media (max-width: 640px) {
+
     .event {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        align-items: start;
     }
 
-    .event-date {
-        font-size: 1.4rem;
-        font-weight: 700;
+    /* First row: Date + Venue side by side */
+    .event-left {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
     }
 
-    .event-venue {
-        font-size: 1.15rem;
-        font-weight: 600;
-    }
-
+    /* Second row: City */
     .event-location {
-        font-size: 1rem;
-        font-weight: 500;
-        color: #444;
+        text-align: left;
     }
 
+    /* Third row: Address */
     .event-address {
-        font-size: 0.9rem;
-        color: #777;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* Reduce font sizes slightly */
+    .event-date,
+    .event-venue,
+    .event-location {
+        font-size: 1.25rem;
     }
 }
+
 
 display: inline-block;
 .gallery-details h2 { margin: 0 0 6px; }
