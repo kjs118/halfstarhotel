@@ -332,6 +332,7 @@ h2, h4 {
 .event-venue {
     font-size: 1.8rem;
     font-weight: 600;
+    text-align: left;
 }
 
 /* Right side: City + Address */
@@ -343,6 +344,7 @@ h2, h4 {
     font-size: 0.95rem;
     font-weight: 400;
     opacity: 0.75;
+    text-align: left;
 }
 
 
@@ -350,6 +352,7 @@ h2, h4 {
     font-size: 0.95rem;
     opacity: 0.75;
     margin-top: 4px;
+    text-align: left;
 }
 
 /* Remove bottom margin from last event */
@@ -407,12 +410,7 @@ h2, h4 {
         opacity: 0.75;
         line-height: 1.35;
     }
-    /* Force all right-column text to align left */
-.event-venue,
-.event-location,
-.event-address {
-    text-align: left;
-}
+
 
 
     /* Disable old flex wrappers so they don't interfere */
