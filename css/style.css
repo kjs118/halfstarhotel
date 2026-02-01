@@ -390,7 +390,7 @@ footer {
 }
     
 .gallery-video {
-    width: 220px;
+    max-width: 768px;
     object-fit: cover;
   aspect-ratio: 16 / 9;
   border: 2px solid #222;
