@@ -183,9 +183,9 @@ h2, h4 {
 /* Hero band image - centered under nav */
 .hero-band {
     text-align: center;
-    margin: 15px auto 10px auto;
+    margin: 15px auto 50px auto;
     max-width: 1200px;
-    padding: 0 20px;
+    padding: 0px;
 }
 
 .hero-img {
