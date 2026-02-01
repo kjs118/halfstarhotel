@@ -444,69 +444,100 @@ display: inline-block;
 .gallery-details h2 { margin: 0 0 6px; }
 .gallery-details p { margin: 0 0 6px;; line-height: 1.5; }    
 
-/* ================= CONTACT FORM ONLY ================= */
+/* =========================
+   SYMMETRICAL CONTACT FORM
+========================= */
 
 #contact {
-  max-width: 700px;
-  margin: 0 auto;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: 160px 1fr; /* label | field */
+    gap: 14px 18px;
+    align-items: center;
+    margin-top: 25px;
 }
 
+/* Remove old flex stacking */
 .form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: contents;
 }
 
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  text-align: left;
+/* Labels */
+.contact-form label {
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-right: 6px;
 }
 
+/* Inputs + textarea */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  font-family: inherit;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
 }
 
+/* Textarea height */
 .contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
+    min-height: 110px;
+    resize: vertical;
 }
 
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
+}
+
+/* Button spans both columns */
 .send-btn {
-  margin-top: 10px;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 8px;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background: #000;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Desktop — labels above fields, fields centered */
-@media (min-width: 769px) {
-  .contact-form {
-    align-items: center;
-  }
-
-  .form-group {
-    max-width: 520px;
-  }
+.send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
+
+/* MOBILE — stack fields */
+@media (max-width: 640px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form label {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .send-btn {
+        width: 100%;
+    }
+}
+
 
 
     footer {
