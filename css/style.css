@@ -302,14 +302,15 @@ h2, h4 {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    border-bottom: 1px solid #e3e3e3; /* light gray line */
 }
 
 .event {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 0;
-    border-bottom: 1px solid #e3e3e3; /* light gray line */
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 /* Left side: Date + Venue */
@@ -348,41 +349,32 @@ h2, h4 {
     margin-top: 4px;
 }
 
+/* ======================
+   MOBILE LAYOUT
+====================== */
+
 @media (max-width: 640px) {
-
     .event {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 4px;
-        align-items: start;
-            border-bottom: 1px solid #e3e3e3; /* light gray line */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
     }
 
-    /* First row: Date + Venue side by side */
     .event-left {
-        display: flex;
-        gap: 10px;
-        align-items: baseline;
+        gap: 12px;
     }
 
-    /* Second row: City */
-    .event-location {
+    .event-right {
         text-align: left;
     }
 
-    /* Third row: Address */
-    .event-address {
-        text-align: left;
-        margin-top: 0;
-    }
-
-    /* Reduce font sizes slightly */
     .event-date,
     .event-venue,
     .event-location {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 }
+
 
 
 
