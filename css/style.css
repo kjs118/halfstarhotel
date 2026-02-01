@@ -298,13 +298,13 @@ h2, h4 {
 .gallery-container {
   max-width: 1000px;
   margin: auto;
-  padding: 40px 40px 60px;
+  padding: 10px 10px 10px;
 }
 
 /* ===== Gallery item ===== */
 .gallery-item {
-  margin-bottom: 40px;         /* spacing after section */
-  padding-bottom: 40px;        /* spacing for divider */
+  margin-bottom: 20px;         /* spacing after section */
+  padding-bottom: 20px;        /* spacing for divider */
   border-bottom: 1px solid #999; /* line between sections */
 }
 
