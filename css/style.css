@@ -640,7 +640,7 @@ footer {
 }
 
 /* Mobile — stack fields and make button full width */
-@media (max-width: 640px) {
+
     .form-group {
         max-width: 100%;
     }
@@ -648,6 +648,7 @@ footer {
     .send-btn {
         width: 100%;
     }
+}
 }
 }
 /* .carousel {
