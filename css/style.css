@@ -63,7 +63,7 @@ header {
 /* Logo wrapper to limit click area */
 .logo-wrapper {
     display: inline-block;
-    max-width: 60%;
+    max-width: 30%;
     margin: 0 auto;
 }
 
