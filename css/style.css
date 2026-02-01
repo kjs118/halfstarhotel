@@ -391,6 +391,7 @@ h2, h4 {
         grid-row: 1;
         font-size: 1.15rem;
         font-weight: 600;
+        text-align: left;
     }
 
     /* City/State = column 2, row 2 */
@@ -400,6 +401,7 @@ h2, h4 {
         font-size: 0.9rem;
         opacity: 0.75;
         line-height: 1.35;
+        text-align: left;
     }
 
     /* Address = column 2, row 3 */
@@ -409,6 +411,7 @@ h2, h4 {
         font-size: 0.9rem;
         opacity: 0.75;
         line-height: 1.35;
+        text-align: left;
     }
 
 
