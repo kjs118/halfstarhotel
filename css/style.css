@@ -343,14 +343,14 @@ footer {
     }
 
   /* Mobile - make both images match full container width */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .hero-img,
     .story-img,
     .inspires-img {
         max-width: 100%;          /* both take full available width on mobile */
         border-radius: 8px;
         box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-    }
+    } */
    .story-container,
     .inspires-container {
         flex-direction: column;
