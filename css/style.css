@@ -231,14 +231,6 @@ h2, h4 {
     min-width: 300px;
 }
 
-/* Our Story image (inside left/right section) */
-.story-img,
-.inspires-img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
 
 /* Band members */
 .band-members {
