@@ -294,6 +294,87 @@ h2, h4 {
     margin-bottom: 80px;
 }
 
+/* ======================
+   EVENTS LIST
+====================== */
+
+.events {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Left side: Date + Venue */
+.event-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Big date */
+.event-date {
+    font-size: 1.8rem;
+    font-weight: 700;
+    min-width: 110px;
+}
+
+/* Venue name same visual weight */
+.event-venue {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Right side: City + Address */
+.event-right {
+    text-align: right;
+}
+
+.event-location {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.event-address {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    margin-top: 4px;
+}
+
+/* ======================
+   MOBILE LAYOUT
+====================== */
+
+@media (max-width: 640px) {
+    .event {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .event-left {
+        gap: 12px;
+    }
+
+    .event-right {
+        text-align: left;
+    }
+
+    .event-date,
+    .event-venue,
+    .event-location {
+        font-size: 1.3rem;
+    }
+}
+
+
 /* ===== Gallery container ===== */
 .gallery-container {
   max-width: 1000px; /* desktop max width */
