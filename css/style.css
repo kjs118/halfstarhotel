@@ -337,7 +337,10 @@ h2, h4 {
 
 /* Right side: City + Address */
 .event-right {
-    text-align: right;
+  text-align: left;  /* force left alignment */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .event-location {
