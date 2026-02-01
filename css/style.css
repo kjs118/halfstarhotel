@@ -356,7 +356,10 @@ footer {
     .inspires-image {
         order: -1;
     }
-
+    .hero-band {
+        padding: 0 10px;          /* slight side padding if needed */
+        margin: 15px auto 35px auto;
+    }
     .story-text,
     .inspires-text {
         text-align: center;
