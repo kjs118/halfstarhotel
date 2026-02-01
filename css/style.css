@@ -294,9 +294,18 @@ h2, h4 {
     margin-bottom: 80px;
 }
 
-/* Gallery - space after last item */
+/* ===== Gallery Videos: line between sections ===== */
+.gallery-item {
+    margin-bottom: 40px; /* space after each video section */
+    padding-bottom: 40px; /* space for the line */
+    border-bottom: 1px solid #999; /* the divider line */
+}
+
+/* Remove line from last item */
 .gallery-item:last-child {
-    margin-bottom: 80px;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* Footer */
