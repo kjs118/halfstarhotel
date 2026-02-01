@@ -533,7 +533,7 @@ display: inline-block;
         width: 100%;
     }
 
-.carousel {
+/* .carousel {
     width: 100%;
     overflow-x: auto;
     margin: 3em auto;
@@ -586,7 +586,7 @@ display: inline-block;
     text-align: center;
     align-content: center;
 }
-    
+    */
 
     footer {
         margin-top: 15px;
