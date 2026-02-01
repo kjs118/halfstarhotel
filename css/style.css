@@ -1,4 +1,4 @@
-/* css/style.css - Half Star Hotel shared styles - RESTORED WORKING VERSION */
+/* css/style.css - Half Star Hotel shared styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap');
 
@@ -180,6 +180,24 @@ h2, h4 {
     margin-bottom: 20px;
 }
 
+/* Hero band image - centered under nav */
+.hero-band {
+    text-align: center;
+    margin: 20px auto 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 800px;             /* caps desktop size - adjust if needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
 /* Story & Inspires sections */
 .story-section,
 .inspires-section {
@@ -216,7 +234,7 @@ h2, h4 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Band members - working centered 3+2 layout */
+/* Band members */
 .band-members {
     display: flex;
     flex-wrap: wrap;
@@ -262,20 +280,21 @@ h2, h4 {
 
 /* Social section */
 .social {
-    margin-bottom: 40px;  /* reduced space to footer */
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-/* Extra space above band cards on index */
+/* Extra top margin on Meet the Band */
 #meet-the-band {
-    margin-top: 100px;    /* more space between previous content and band cards */
+    margin-top: 100px;
 }
 
-/* Events - more space after last event */
+/* Events - space after last event */
 .event:last-child {
     margin-bottom: 80px;
 }
 
-/* Gallery - more space after last item */
+/* Gallery - space after last item */
 .gallery-item:last-child {
     margin-bottom: 80px;
 }
@@ -286,7 +305,7 @@ footer {
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 40px;     /* reduced from social */
+    margin-top: 20px;
 }
 
 /* Mobile adjustments */
@@ -315,6 +334,16 @@ footer {
         opacity: 1 !important;
         visibility: visible !important;
         transition: opacity 0.4s ease;
+    }
+
+    .hero-band {
+        margin: 15px auto 40px auto;
+    }
+
+    .hero-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
     .story-container,
@@ -348,10 +377,11 @@ footer {
     }
 
     .social {
-        margin-bottom: 30px;
+        margin-top: 30px;
+        margin-bottom: 15px;
     }
 
     footer {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 }
