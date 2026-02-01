@@ -306,6 +306,7 @@ h2, h4 {
   margin-bottom: 20px;         /* spacing after section */
   padding-bottom: 20px;        /* spacing for divider */
   border-bottom: 1px solid #999; /* line between sections */
+  text-align: center;           /* centers inline/block elements like video */
 }
 
 /* Remove line from last item */
@@ -318,11 +319,12 @@ h2, h4 {
 /* Video itself */
 .gallery-video {
   max-width: 768px;
+  width: 100%;                 /* ensures it can shrink on smaller screens */
   object-fit: cover;
   aspect-ratio: 16 / 9;
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 16px; /* spacing between video and text */
+   margin: 0 auto 16px auto;    /* centers the video horizontally */
 }
 
 .gallery-video iframe {
