@@ -532,29 +532,36 @@ footer {
         margin-top: 30px;
         margin-bottom: 15px;
     }
+  @media (max-width: 768px) {
     .event {
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: 6px;
+        padding: 20px 0;
     }
 
     .event-date {
-        background: #000;
-        color: white;
-        padding: 8px 10px;
-        border-radius: 6px;
-        font-size: 0.95rem;
+        font-size: 1.4rem;
         font-weight: 700;
-        min-width: 70px;
-        text-align: center;
     }
 
-    .event-details {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
+    .event-venue {
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+
+    .event-location {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #444;
+    }
+
+    .event-address {
+        font-size: 0.9rem;
+        color: #777;
     }
 }
+
 display: inline-block;
 .gallery-details h2 { margin: 0 0 6px; }
 .gallery-details p { margin: 0 0 6px;; line-height: 1.5; }    
