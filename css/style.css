@@ -364,34 +364,32 @@ h2, h4 {
 @media (max-width: 640px) {
 
     .event {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
+        display: grid;
+        grid-template-columns: 90px 1fr; /* date column + details column */
+        column-gap: 12px;
+        align-items: start;
+        padding: 16px 0;
     }
 
-    .event-left {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2px;
-    }
-
+    /* Date column */
     .event-date {
-        font-size: 1.1rem;
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 1.05rem;
         font-weight: 700;
-        margin-bottom: 2px;
     }
 
+    /* Everything else goes in column 2 */
     .event-venue {
-        font-size: 1.2rem;
+        grid-column: 2;
+        font-size: 1.15rem;
         font-weight: 600;
+        line-height: 1.2;
     }
 
-    /* MOVE RIGHT SIDE UNDER VENUE */
     .event-right {
+        grid-column: 2;
         text-align: left;
-        width: 100%;
-        margin-left: 0;
         margin-top: 2px;
     }
 
@@ -399,9 +397,15 @@ h2, h4 {
     .event-address {
         font-size: 0.9rem;
         opacity: 0.7;
-        line-height: 1.4;
+        line-height: 1.35;
+    }
+
+    /* Slightly lighter divider on mobile */
+    .event {
+        border-bottom: 1px solid #e5e5e5;
     }
 }
+
 
 
 
