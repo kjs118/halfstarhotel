@@ -355,6 +355,7 @@ h2, h4 {
         grid-template-columns: 1fr;
         gap: 4px;
         align-items: start;
+            border-bottom: 1px solid #e3e3e3; /* light gray line */
     }
 
     /* First row: Date + Venue side by side */
