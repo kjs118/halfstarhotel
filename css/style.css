@@ -301,11 +301,11 @@ h2, h4 {
 
 /* Footer */
 footer {
-    background-color: var(--primary-dark);
+    background-color: #EEEEEE(--primary-dark);
     color: white;
     text-align: center;
     padding: 24px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Mobile adjustments */
@@ -383,7 +383,7 @@ footer {
         margin-bottom: 15px;
     }
 .gallery-video {
-  width: 320px;
+  width: 520px;
   aspect-ratio: 16 / 9;
   border: 2px solid #222;
   border-radius: 6px;
