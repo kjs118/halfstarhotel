@@ -533,11 +533,27 @@ footer {
         margin-bottom: 15px;
     }
     .event {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px 0;
-    border-bottom: 1px solid #dcdcdc; /* re-declare so mobile keeps it */
-}
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .event-date {
+        background: #000;
+        color: white;
+        padding: 8px 10px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        min-width: 70px;
+        text-align: center;
+    }
+
+    .event-details {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 display: inline-block;
 .gallery-details h2 { margin: 0 0 6px; }
