@@ -603,12 +603,14 @@ footer {
    CONTACT FORM (desktop & mobile unified)
 ========================= */
 
+/* Container */
 #contact {
     max-width: 760px;
     margin: 0 auto;
     text-align: center;
 }
 
+/* Form layout */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -627,7 +629,7 @@ footer {
 
 /* Labels */
 .contact-form label {
-    text-align: left;  /* always left-aligned */
+    text-align: left;
     font-weight: 600;
     font-size: 0.95rem;
     margin-bottom: 6px;
@@ -677,16 +679,19 @@ footer {
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Mobile — stack fields and make button full width */
-
+/* =========================
+   MOBILE OVERRIDES
+========================= */
+@media (max-width: 768px) {
     .form-group {
-        max-width: 100%;
+        max-width: 100%;   /* stack full width on mobile */
     }
 
     .send-btn {
-        width: 100%;
+        width: 100%;       /* full-width button on mobile */
     }
 }
+
 
 .photo-carousel {
   max-width: 1000px;       /* optional wrapper max width */
