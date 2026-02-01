@@ -384,12 +384,12 @@ footer {
     }
 
 .gallery-details h2 { margin: 0 0 6px; }
-.gallery-details p { margin: 4px 0; line-height: 1.5; }    
+.gallery-details p { margin: 0 0 6px;; line-height: 1.5; }    
 
 .gallery-container {
   max-width: 1000px;
   margin: auto;
-  padding: 40px 20px 60px;
+  padding: 40px 40px 60px;
 }
     
 .gallery-video {
