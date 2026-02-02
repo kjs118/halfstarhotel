@@ -60,7 +60,6 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Logo wrapper to limit click area */
 .logo-wrapper {
   display: inline-block;
   max-width: 30%;
@@ -180,17 +179,17 @@ h2, h4 {
   margin-bottom: 20px;
 }
 
-/* Hero band image - centered under nav */
+/* Hero band image */
 .hero-band {
   text-align: center;
   margin: 15px auto 50px auto;
   max-width: 1200px;
-  padding: 0px;
+  padding: 0;
 }
 
 .hero-img {
   width: 100%;
-  max-width: 800px; /* caps desktop size - adjust if needed */
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -278,18 +277,15 @@ h2, h4 {
   color: #555;
 }
 
-/* Social section */
 .social {
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
-/* Extra top margin on Meet the Band */
 #meet-the-band {
   margin-top: 100px;
 }
 
-/* Events - space after last event */
 .event:last-child {
   margin-bottom: 80px;
 }
@@ -297,55 +293,47 @@ h2, h4 {
 /* ======================
    EVENTS PAGE STYLES
 ====================== */
-
-/* Container for all events */
 .events {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Individual event */
 .event {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
-  border-bottom: 1px solid #ddd; /* light line between events */
+  border-bottom: 1px solid #ddd;
 }
 
-/* Left side: Date + Venue */
 .event-left {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Big date */
 .event-date {
   font-size: 1.8rem;
   font-weight: 700;
   min-width: 110px;
 }
 
-/* Venue name same visual weight */
 .event-venue {
   font-size: 1.8rem;
   font-weight: 600;
   text-align: left;
 }
 
-/* Events: desktop layout */
 @media (min-width: 641px) {
   .event {
     display: flex;
     align-items: flex-start;
-    gap: 30px; /* space between date and details */
+    gap: 30px;
     padding: 18px 0;
     border-bottom: 1px solid #ddd;
   }
 
-  /* Left column = date */
   .event-date {
     font-size: 1.8rem;
     font-weight: 700;
@@ -353,13 +341,12 @@ h2, h4 {
     line-height: 1.2;
   }
 
-  /* Right column = details stacked vertically */
   .event-right {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    flex: 1; /* takes remaining space */
-    align-items: flex-start; /* venue left-aligned by default */
+    flex: 1;
+    align-items: flex-start;
   }
 
   .event-venue {
@@ -375,18 +362,15 @@ h2, h4 {
     font-weight: 400;
     opacity: 0.75;
     line-height: 1.3;
-    text-align: right; /* <-- key change */
-    width: 100%; /* needed to respect right alignment */
+    text-align: right;
+    width: 100%;
   }
 }
 
-/* ======================
-   MOBILE LAYOUT
-====================== */
 @media (max-width: 640px) {
   .event {
     display: grid;
-    grid-template-columns: 85px 1fr; /* DATE column + DETAILS column */
+    grid-template-columns: 85px 1fr;
     grid-template-rows: auto auto auto;
     column-gap: 14px;
     row-gap: 2px;
@@ -394,7 +378,6 @@ h2, h4 {
     padding: 16px 0;
   }
 
-  /* Date = column 1, row 1 */
   .event-date {
     grid-column: 1;
     grid-row: 1;
@@ -403,7 +386,6 @@ h2, h4 {
     line-height: 1.2;
   }
 
-  /* Venue = column 2, row 1 */
   .event-venue {
     grid-column: 2;
     grid-row: 1;
@@ -412,7 +394,6 @@ h2, h4 {
     text-align: left;
   }
 
-  /* City/State = column 2, row 2 */
   .event-location {
     grid-column: 2;
     grid-row: 2;
@@ -422,7 +403,6 @@ h2, h4 {
     text-align: left;
   }
 
-  /* Address = column 2, row 3 */
   .event-address {
     grid-column: 2;
     grid-row: 3;
@@ -432,56 +412,51 @@ h2, h4 {
     text-align: left;
   }
 
-  /* Disable old flex wrappers so they don't interfere */
   .event-left,
   .event-right {
     display: contents;
   }
 }
 
-/* ===== Gallery container ===== */
+/* ===== Gallery videos ===== */
 .gallery-container {
-  max-width: 1000px; /* desktop max width */
+  max-width: 1000px;
   margin: auto;
-  padding: 10px 10px 10px;
+  padding: 10px;
 }
 
-/* ===== Gallery item ===== */
 .gallery-item {
-  margin-bottom: 20px; /* spacing after section */
-  padding-bottom: 20px; /* spacing for divider */
-  border-bottom: 1px solid #999; /* line between sections */
-  text-align: center; /* centers inline/block elements like video */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999;
+  text-align: center;
 }
 
-/* Remove line from last item */
 .gallery-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-/* Desktop: keep videos max 768px */
 .gallery-video {
-  max-width: 768px; /* desktop cap */
-  width: 100%; /* fills container */
-  margin: 0 auto 16px auto; /* centers horizontally */
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto 16px auto;
   aspect-ratio: 16 / 9;
   border-radius: 6px;
   overflow: hidden;
 }
 
-/* Mobile: make video nearly full width */
 @media (max-width: 768px) {
   .gallery-container {
-    max-width: 100%; /* remove desktop limit */
-    padding: 20px 10px 40px; /* less padding on sides */
+    max-width: 100%;
+    padding: 20px 10px 40px;
   }
 
   .gallery-video {
-    max-width: 100%; /* removes desktop limit */
-    width: 100%; /* fills container */
-    margin: 0 auto 16px auto; /* still centered */
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 16px auto;
   }
 }
 
@@ -491,7 +466,6 @@ h2, h4 {
   border: 0;
 }
 
-/* Gallery text */
 .gallery-details h2 {
   margin: 0 0 6px;
 }
@@ -545,7 +519,7 @@ footer {
   }
 
   .hero-band {
-    padding: 0 10px; /* slight side padding if needed */
+    padding: 0 10px;
     margin: 15px auto 35px auto;
   }
 
@@ -583,26 +557,17 @@ footer {
     margin-top: 30px;
     margin-bottom: 15px;
   }
-
-  /* Carousel - smaller cards on mobile */
-  .carousel-item {
-    flex: 0 0 200px;
-    height: 140px;
-  }
 }
 
 /* =========================
-   CONTACT FORM (desktop & mobile unified)
+   CONTACT FORM
 ========================= */
-
-/* Container */
 #contact {
   max-width: 760px;
   margin: 0 auto;
   text-align: center;
 }
 
-/* Form layout */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -611,15 +576,13 @@ footer {
   margin-top: 25px;
 }
 
-/* Each field container */
 .form-group {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 520px; /* desktop input width */
+  max-width: 520px;
 }
 
-/* Labels */
 .contact-form label {
   text-align: left;
   font-weight: 600;
@@ -627,7 +590,6 @@ footer {
   margin-bottom: 6px;
 }
 
-/* Inputs and textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -639,13 +601,11 @@ footer {
   transition: all 0.2s ease;
 }
 
-/* Textarea height */
 .contact-form textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-/* Focus effect */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
@@ -653,7 +613,6 @@ footer {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.08);
 }
 
-/* Button styling */
 .send-btn {
   padding: 12px 40px;
   font-size: 1rem;
@@ -671,48 +630,46 @@ footer {
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
-/* Mobile overrides for form */
 @media (max-width: 768px) {
   .form-group {
-    max-width: 100%; /* stack full width on mobile */
+    max-width: 100%;
   }
 
   .send-btn {
-    width: 100%; /* full-width button on mobile */
+    width: 100%;
   }
 }
 
 /* ===== Photo Carousel ===== */
-
-/* Carousel section wrapper (optional centering/max-width) */
 .photo-carousel {
   max-width: 1000px;
   margin: 50px auto;
   padding: 0 10px;
 }
 
-/* The scrollable container */
 .carousel-container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;              /* Prevents wrapping to vertical lines */
   gap: 12px;
   overflow-x: auto;
+  overflow-y: hidden;             /* No vertical scroll */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* smooth on iOS */
-  padding-bottom: 10px; /* room if scrollbar appears */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+  width: 100%;
+  min-height: 200px;              /* Prevents collapsing to tiny height */
 }
 
-/* Hide scrollbar for cleaner look (optional but common) */
 .carousel-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Each image slide */
 .carousel-item {
-  flex: 0 0 250px;          /* fixed width, no grow/shrink */
-  height: 180px;            /* fixed height */
-  /* aspect-ratio: 5 / 3; */ /* uncomment if you prefer proportional height instead of fixed */
-  object-fit: cover;        /* crops to fill the box nicely */
+  flex: 0 0 250px;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   scroll-snap-align: start;
@@ -721,4 +678,15 @@ footer {
 
 .carousel-item:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    gap: 10px;
+  }
+
+  .carousel-item {
+    flex: 0 0 180px;
+    height: 130px;
+  }
 }
