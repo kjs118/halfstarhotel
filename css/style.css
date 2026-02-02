@@ -696,19 +696,23 @@ footer {
 .photo-carousel {
     max-width: 1000px;
     margin: 50px auto;
-    position: relative; /* for arrows if needed */
-    overflow: hidden;   /* hide overflow */
+    overflow: hidden;
     padding: 0 10px;
 }
 
-/* Inner container for sliding */
 .carousel-container {
     display: flex;
     gap: 12px;
-    transition: transform 0.4s ease;
+    overflow-x: auto;               /* ENABLE horizontal scrolling */
+    scroll-snap-type: x mandatory;  /* snap to each item */
+    scroll-behavior: smooth;        /* smooth scroll on drag/scroll */
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
 }
 
-/* Carousel item */
+.carousel-container::-webkit-scrollbar {
+    display: none;                  /* hide scroll bar */
+}
+
 .carousel-item {
     flex: 0 0 auto;
     width: 250px;
@@ -716,6 +720,7 @@ footer {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    scroll-snap-align: start;       /* snap start of item */
     transition: transform 0.3s ease;
 }
 
