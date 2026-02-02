@@ -693,13 +693,6 @@ footer {
 }
 
 /* ===== Carousel wrapper ===== */
-.photo-carousel {
-    max-width: 1000px;
-    margin: 50px auto;
-    overflow: hidden;
-    padding: 0 10px;
-}
-
 .carousel-container {
     display: flex;
     gap: 12px;
@@ -709,6 +702,7 @@ footer {
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap; /* ADD THIS */
 }
+
 
 
 .carousel-container::-webkit-scrollbar {
