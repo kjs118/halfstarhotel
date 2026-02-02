@@ -230,11 +230,24 @@ h2, h4 {
 
 /* Mobile: stack vertically, text first (respects HTML order) */
 @media (max-width: 768px) {
-  .story-container,
-  .inspires-container {
-    flex-direction: column;
-    gap: 30px;
+  .hero-img,
+  .story-img,
+  .inspires-img {
+    width: 100%;
+    max-width: 100% !important;   /* Ensures no cap from desktop rule leaks in */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   }
+
+  /* Optional: add some breathing room if they feel too edge-to-edge */
+  .story-image,
+  .inspires-image {
+    padding: 0 10px;   /* tiny side padding on very small screens */
+  }
+}
 
   .story-text,
   .inspires-text {
