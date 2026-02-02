@@ -703,11 +703,13 @@ footer {
 .carousel-container {
     display: flex;
     gap: 12px;
-    overflow-x: auto;               /* ENABLE horizontal scrolling */
-    scroll-snap-type: x mandatory;  /* snap to each item */
-    scroll-behavior: smooth;        /* smooth scroll on drag/scroll */
-    -webkit-overflow-scrolling: touch; /* smooth on iOS */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap; /* ADD THIS */
 }
+
 
 .carousel-container::-webkit-scrollbar {
     display: none;                  /* hide scroll bar */
