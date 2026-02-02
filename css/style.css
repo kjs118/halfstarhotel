@@ -203,7 +203,7 @@ h2, h4 {
   margin-bottom: 80px;
 }
 
-.story-container,
+..story-container,
 .inspires-container {
   display: flex;
   flex-wrap: wrap;
@@ -225,14 +225,33 @@ h2, h4 {
   min-width: 300px;
 }
 
-.story-img,
-.inspires-img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+/* Mobile: stack vertically, respect HTML order (text → image) */
+@media (max-width: 768px) {
+  .story-container,
+  .inspires-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* No order change needed — HTML order already gives text-first */
+  .story-text,
+  .inspires-text {
+    text-align: center; /* or left if preferred */
+  }
 }
 
+/* Desktop: alternate sides */
+@media (min-width: 769px) {
+  /* Our Story: image left, text right (default HTML order works) */
+  .story-container {
+    flex-direction: row;
+  }
+
+  /* What Inspires Us: text left, image right → reverse order */
+  .inspires-container {
+    flex-direction: row-reverse;
+  }
+}
 /* Band members */
 .band-members {
   display: flex;
