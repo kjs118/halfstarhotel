@@ -692,7 +692,51 @@ footer {
     }
 }
 
-v
+/* ===== Carousel wrapper ===== */
+.photo-carousel {
+    max-width: 1000px;
+    margin: 50px auto;
+    position: relative; /* for arrows if needed */
+    overflow: hidden;   /* hide overflow */
+    padding: 0 10px;
+}
+
+/* Inner container for sliding */
+.carousel-container {
+    display: flex;
+    gap: 12px;
+    transition: transform 0.4s ease;
+}
+
+/* Carousel item */
+.carousel-item {
+    flex: 0 0 auto;
+    width: 250px;
+    aspect-ratio: 5 / 3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 200px;
+    }
+}
+
 
 /* .carousel {
     width: 100%;
